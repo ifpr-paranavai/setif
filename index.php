@@ -36,7 +36,10 @@
               <a class="nav-link" href="#">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
+              <a class="nav-link">Disabled</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">AULA</a>
             </li>
           </ul>
         </div>
