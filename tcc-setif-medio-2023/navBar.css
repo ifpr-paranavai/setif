@@ -1,0 +1,57 @@
+.nav-link {
+  color: white;
+  align-items: center;
+  font-size: 18px;
+  width: 100%;
+  display: flexs;
+}
+
+.nav-link:hover{
+  color: rgb(210, 205, 205);
+ 
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  border: 1px solid #ccc;
+}
+.nav-item {
+  width: 20%;
+}
+.fotoif {
+  height: 800px;
+  width: 100%;
+  align-items: center;
+  
+}
+.parallax-section {
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-top: auto;
+}
+
+.parallax-section:nth-of-type(1) {
+  background-image: url("imgIf.png");
+
+}
+
+h1, h2 {
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ 
+}
+
+h1 {
+  font-size: 500px;
+  text-align: center;
+}
+
+h2 {
+font-size: 50px;
+  text-align: center;
+}
