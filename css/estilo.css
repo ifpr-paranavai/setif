@@ -1,0 +1,36 @@
+.div-label {
+    margin-top: -15px;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    left: 50%;
+    display: table;
+    width: -moz-max-content;
+    position: absolute;
+    transform: translateX(-50%);
+    text-transform: none;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #3777BA;
+}
+
+.border-gray {
+    border: 1px solid rgba(151, 151, 151, .3);
+}
+
+.icone-galeria {
+    font-size: 150px;
+    color: rgba(55, 119, 186, 0.69);
+    padding: 50px 0px;
+    transform: scale(.9);
+}
+
+img.icone-galeria {
+    height: 250px;
+}
+
+.icone-galeria:hover {
+    transform: scale(1);
+    color: rgb(55, 119, 186);
+}

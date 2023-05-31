@@ -1,15 +1,19 @@
-.nav-link {
+.gradiente-navbar {
+  background-image: linear-gradient(to right, #2776A4, #464BA4, #AC32C8);
+}
+
+.nav-link-personalizado {
   color: white;
   align-items: center;
   font-size: 18px;
   width: 100%;
-  display: flexs;
+  display: flex;
 }
 
-.nav-link:hover{
+.nav-link-personalizado:hover {
   color: rgb(210, 205, 205);
- 
 }
+
 .navbar {
   position: fixed;
   top: 0;
@@ -17,46 +21,63 @@
   height: 90px;
   border: 1px solid #ccc;
 }
+
 .nav-item {
   width: 20%;
 }
+
 .fotoif {
   height: 800px;
   width: 100%;
   align-items: center;
-  
+
 }
-.parallax-section {
+
+.parallax-sobre {
   height: 600px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   margin-top: auto;
-  
+
 }
 
-.parallax-section:nth-of-type(1) {
+.parallax-sobre:nth-of-type(1) {
   background-image: url("imgIf.png");
+}
+
+.parallax-programacao {
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-top: auto;
 
 }
 
-h1, h2 {
+.parallax-programacao:nth-of-type(3) {
+  background-image: url("imgIf2.png");
+}
+
+h1,
+h2 {
 
   font-family: 'Open Sans', sans-serif;
- 
+
 }
 
 h1 {
   font-size: 500px;
   text-align: center;
- 
+
 }
 
 h2 {
-font-size: 50px;
+  font-size: 50px;
   text-align: center;
- 
+
 }
 
 .image-line {
@@ -92,29 +113,29 @@ font-size: 50px;
 
 }
 
-#insc{
+#insc {
   top: 0%;
- bottom: 0;
+  bottom: 0;
+  color: white;
+  align-items: center;
+  font-size: 18px;
+  width: 100%;
+  display: flexs;
 }
-    color: white;
-    align-items: center;
-    font-size: 18px;
-    width: 100%;
-    display: flexs;
-  }
-  
- .nav-link:hover{
-    color: rgb(210, 205, 205);
-   
- }
- .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 90px;
-    border: 1px solid #ccc;
-  }
+
+.nav-link:hover {
+  color: rgb(210, 205, 205);
+
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  border: 1px solid #ccc;
+}
+
 .nav-item {
-    width: 20%;
-  }
-  
+  width: 20%;
+}
