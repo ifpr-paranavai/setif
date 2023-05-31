@@ -96,3 +96,25 @@ font-size: 50px;
   top: 0%;
  bottom: 0;
 }
+    color: white;
+    align-items: center;
+    font-size: 18px;
+    width: 100%;
+    display: flexs;
+  }
+  
+ .nav-link:hover{
+    color: rgb(210, 205, 205);
+   
+ }
+ .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    border: 1px solid #ccc;
+  }
+.nav-item {
+    width: 20%;
+  }
+  
