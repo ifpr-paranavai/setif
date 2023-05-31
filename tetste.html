@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Linha com imagem em HTML</title>
+  <style>
+    .image-line {
+      position: relative;
+      height: 1px;
+      background-color: black;
+      margin: 20px 0;
+    }
+
+    .image-line img {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Título da Página</h1>
+  
+  <p>Este é um parágrafo de texto.</p>
+  
+  <div class="image-line">
+    <img src="mapa.png" alt="Imagem">
+  </div>
+  
+  <p>Outro parágrafo após a linha.</p>
+</body>
+</html>
