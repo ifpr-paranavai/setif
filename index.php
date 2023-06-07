@@ -56,24 +56,24 @@
       </div>
     </div>
   </section>
+
   <section class="parallax-programacao">
-    <div class="container text-white">
-      <h1 class="fs-6 font-weight-bold p-5 text-uppercase text-center"> Sobre o Evento</h1>
-      <h2 class="pb-5 text-center">A Semana da Tecnologia da Informação do IFPR Campus Paranavaí (SETIF) é um
-        evento que acontece todos os anos na cidade de Paranavaí-PR. Além da mostra de trabalhos, este evento conta com
-        minicursos, palestras e competições. Em 2022, a SETIF ocorrerá de 7 a 11 de novembro.
-        Além das atividades relacionadas à tecnologia da informação, dentro da programação da SETIF ainda está previsto
-        o IFTECH e o Show de Talentos.</h2>
-      <h2 id="insc" class="font-weight-bold mt-5 text-center">As inscrições para as palestras e mini-cursos deverão ser
-        realizadas por meio do Even3: <a class="font-weight-light text-white text-decoration-none"
-          href="https://www.even3.com.br/setif-2022/">https://www.even3.com.br/setif-2022/</a></h2>
+         
+<div id="even3-widget-session" style="width:70%;height:60%;">
+<iframe
+ src="https://www.even3.com.br/widget/index?evento=setif-2022&amp;type=session&amp;lang=pt"
+  id="even3_session" frameborder="0" vspace="0" hspace="0" marginheight="10" marginwidth="5" 
+  width="100%" scrolling="no"  style="overflow: auto; height: 999px; ">
+</iframe>
+</div>
+
+
     </div>
   </section>
 
-  <footer>
 
-    contato
-  </footer>
+
+
 
 
   <!-- Optional JavaScript -->
