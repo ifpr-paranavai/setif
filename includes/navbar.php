@@ -17,13 +17,13 @@
                     <a class="nav-link nav-link-personalizado" href="normas-publicacao.php">Normas de Publicação</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-personalizado" href="#">Anais Eventos</a>
+                    <a class="nav-link nav-link-personalizado" href="anaisEventos.php">Anais Eventos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-personalizado" href="#">Corpo editorial</a>
+                    <a class="nav-link nav-link-personalizado" href="corpoEditorial.php">Corpo editorial</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-personalizado" href="#">Fotos</a>
+                    <a class="nav-link nav-link-personalizado" href="fotos.php">Fotos</a>
                 </li>
             </ul>
         </div>
