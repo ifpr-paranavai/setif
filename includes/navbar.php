@@ -1,3 +1,15 @@
+<?php
+$paginas = array(
+    array("index.php", "Apresentação"),
+    array("normas-publicacao.php", "Normas de Publicação"),
+    array("anaisEventos.php", "Anais do Evento"),
+    array("corpoEditorial.php", "Corpo Editorial"),
+    array("fotos.php", "Fotos")
+);
+$url = explode("/", $_SERVER['REQUEST_URI']);
+$paginaAtual = $url[array_key_last($url)];
+?>
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary gradiente-navbar">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -8,23 +20,18 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarToggler">
-            <ul class="nav nav-tabs justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active nav-link-personalizado" aria-current="page"
-                        href="index.php">Apresentação</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-personalizado" href="normas-publicacao.php">Normas de Publicação</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-personalizado" href="anaisEventos.php">Anais Eventos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-personalizado" href="corpoEditorial.php">Corpo editorial</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-personalizado" href="fotos.php">Fotos</a>
-                </li>
+            <ul class="nav nav-tabs justify-content-between w-100">
+
+                <?php
+                foreach ($paginas as $pagina) {
+                    ?>
+                    <li class="nav-item text-center">
+                        <a class="nav-link <?php if ($pagina[0] == $paginaAtual)
+                            echo "active" ?> nav-link-personalizado" aria-current="page" href="<?= $pagina[0] ?>"><?= $pagina[1] ?></a>
+                    </li>
+                    <?php
+                }
+                ?>
             </ul>
         </div>
     </div>
