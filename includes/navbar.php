@@ -26,8 +26,10 @@ $paginaAtual = $url[array_key_last($url)];
                 foreach ($paginas as $pagina) {
                     ?>
                     <li class="nav-item text-center">
-                        <a class="nav-link <?php if ($pagina[0] == $paginaAtual)
-                            echo "active" ?> nav-link-personalizado" aria-current="page" href="<?= $pagina[0] ?>"><?= $pagina[1] ?></a>
+                        <a class="nav-link-personalizado nav-link <?php if ($pagina[0] == $paginaAtual)
+                            echo "active";
+                        else
+                            echo "text-white"; ?>" aria-current="page" href="<?= $pagina[0] ?>"><?= $pagina[1] ?></a>
                     </li>
                     <?php
                 }

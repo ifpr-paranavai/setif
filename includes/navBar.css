@@ -1,31 +1,3 @@
-.gradiente-navbar {
-  background-image: linear-gradient(to right, #2776A4, #464BA4, #AC32C8);
-}
-
-.nav-link-personalizado {
-  color: white;
-  align-items: center;
-  font-size: 18px;
-  width: 100%;
-  display: flex;
-}
-
-.nav-link-personalizado:hover {
-  color: rgb(210, 205, 205);
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 90px;
-  border: 1px solid #ccc;
-}
-
-.nav-item {
-  width: 20%;
-}
-
 .fotoif {
   height: 800px;
   width: 100%;
@@ -122,21 +94,3 @@ h2 {
   width: 100%;
   display: flexs;
 }
-
-.nav-link:hover {
-  color: rgb(210, 205, 205);
-
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 90px;
-  border: 1px solid #ccc;
-}
-
-.nav-item {
-  width: 20%;
-}
-

@@ -1,36 +1,61 @@
-.div-label {
-    margin-top: -15px;
-    background-color: white;
-    padding-left: 10px;
-    padding-right: 10px;
-    left: 50%;
-    display: table;
-    width: -moz-max-content;
-    position: absolute;
-    transform: translateX(-50%);
-    text-transform: none;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    color: #3777BA;
+/* NAVBAR */
+.gradiente-navbar {
+    background-image: linear-gradient(to right, #2776A4, #464BA4, #AC32C8);
 }
 
-.border-gray {
-    border: 1px solid rgba(151, 151, 151, .3);
+.nav-link-personalizado:hover {
+    color: rgb(210, 205, 205) !important;
 }
 
-.icone-galeria {
-    font-size: 150px;
-    color: rgba(55, 119, 186, 0.69);
-    padding: 50px 0px;
-    transform: scale(.9);
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    border: 1px solid #ccc;
 }
 
-img.icone-galeria {
-    height: 250px;
+.nav-item {
+    width: 20%;
 }
 
-.icone-galeria:hover {
-    transform: scale(1);
-    color: rgb(55, 119, 186);
+
+.parallax-sobre,
+.parallax-programacao {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.parallax-sobre {
+    background-image: url("../imagens/imgIf.png");
+    min-height: 100%;
+}
+
+.parallax-programacao {
+    background-image: url("../imagens/passaro.jpg");
+    min-height: 100%;
+}
+
+.frame-programacao {
+    background-color: rgb(255, 255, 255, .7);
+    padding: 30px;
+}
+
+#even3_session {
+    width: 100%;
+    margin-top: 15px;
+    height: 500px;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+
+    .parallax-sobre,
+    .parallax-programacao {
+        background-attachment: scroll;
+    }
 }
