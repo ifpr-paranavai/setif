@@ -96,8 +96,25 @@
       </div>
     </div>
 
-    <div class="apresentacao display: block p-10 m-0">
-      <hr class="custom-color">
+    <div class="apresentacao p-10 m-0 mb-5">
+      <hr class="image-line">
+      <h1 class="text-dark text-weight-bold text-center">Apresentação</h1>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col">
+          <h3 class="text-body-secondary col w-60 px-3 text-weight-lighter text-center ms-10 me-10 d-flex flex-column">Os trabalhos aceitos deverão ser apresentados na SETIF 2022. Os trabalhos deverão ser
+            apresentados na forma de apresentação\oral presencialmente. Mais detalhes sobre a agenda de apresentações serão divulgados após a revisão dos trabalhos submetidos.</h3>
+            <br>
+
+          <h4 class="text-weight-bolder text-center text-dark mx-5 float-start"><img src="./imagens/relogio.png" alt="">Tempo de apresentação</h4>
+        </div>
+        <div class="col">
+          <img class="w-50 " src="./imagens/apresentacao.png" alt="">
+        </div>
+      </div>
+
+
     </div>
 
     <div class="topico interesse" style="background-color: #2EA75A; display:block; padding:10px">
