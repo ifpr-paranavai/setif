@@ -1,6 +1,7 @@
 /* NAVBAR */
 .gradiente-navbar {
     background-image: linear-gradient(to right, #2776A4, #464BA4, #AC32C8);
+
 }
 
 .nav-link-personalizado:hover {
@@ -19,6 +20,13 @@
     width: 20%;
 }
 
+.parallax-localizacao{
+    background-color: #ccc;
+}
+
+.titulo-sessao{
+    margin-top: 40px !important ;
+}
 
 .parallax-sobre,
 .parallax-programacao {
@@ -27,7 +35,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .parallax-sobre {
@@ -42,7 +49,6 @@
 
 .frame-programacao {
     background-color: rgb(255, 255, 255, .7);
-    padding: 30px;
 }
 
 #even3_session {
@@ -59,3 +65,4 @@
         background-attachment: scroll;
     }
 }
+
