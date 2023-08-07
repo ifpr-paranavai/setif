@@ -13,7 +13,7 @@ $paginaAtual = $url[array_key_last($url)];
 <nav class="navbar navbar-expand-lg bg-body-tertiary gradiente-navbar">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="./imagens/setif3.png" alt="Logo" width="300" class="d-inline-block align-text-top">
+            <img src="./imagens/logoNav.png" alt="Logo" width="100" class="d-inline-block align-text-top">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
             aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
