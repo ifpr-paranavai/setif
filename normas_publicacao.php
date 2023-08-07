@@ -124,16 +124,18 @@
         </div>
 
         <div class="col">
-          <img style="width: 720px; margin-left: 80px;" src="./imagens/apresentacao3.jpg" alt="">
+          <img class="my-auto" style="width: 720px; margin-left: 80px;" src="./imagens/apresentacao3.jpg" alt="">
         </div>
       </div>
 
 
     </div>
 
-    <div class="topico interesse" style="background-color: #2EA75A; display:block; padding:10px">
-      <p>aa</p>
-      <p>aa</p>
+    <div class="topico interesse px-5" style="position: relative;background-color: #2EA75A; display:block; padding:10px;">
+      <h1 class="fs-1 text-white font-weight-bold mt-1 text-center">Tópicos de interesse</h1> <br>
+      <img style="width: 150px;height: 150px;border:2px solid #183276" class="rounded-4 mx-5" src="./imagens/Eng Computadores.png">
+      <img style="width: 150px;height: 150px;border:2px solid #183276" class="rounded-4 mx-5" src="./imagens/auto-robotica.png">
+      <img style="width: 150px;height: 150px;border:2px solid #183276" class="rounded-4 mx-5" src="./imagens/Bd.png">
     </div>
 
 
