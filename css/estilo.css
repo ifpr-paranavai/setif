@@ -1,7 +1,8 @@
 /* NAVBAR */
 .gradiente-navbar {
     background-image: linear-gradient(to right, #2776A4, #464BA4, #AC32C8);
-
+    
+    
 }
 
 .nav-link-personalizado:hover {
@@ -20,15 +21,11 @@
     width: 20%;
 }
 
-.parallax-localizacao{
-    background-color: #ccc;
+.container-fluid{
+    position: fixed;
 }
-
-.titulo-sessao{
-    margin-top: 40px !important ;
-}
-
-.parallax-sobre,
+.parallax-sobre, 
+.parallax-localizacao,
 .parallax-programacao {
     position: relative;
     background-attachment: fixed;
@@ -42,6 +39,11 @@
     min-height: 100%;
 }
 
+.parallax-localizacao {
+    background-image: url("../imagens/imgIf.png");
+    min-height: 100%;
+}
+
 .parallax-programacao {
     background-image: url("../imagens/imgIf.png");
     min-height: 100%;
@@ -49,6 +51,9 @@
 
 .frame-programacao {
     background-color: rgb(255, 255, 255, .7);
+    height: 1000px;
+    width: 500px;
+
 }
 
 #even3_session {
@@ -61,6 +66,7 @@
 @media only screen and (max-device-width: 1024px) {
 
     .parallax-sobre,
+    .parallax-localizacao,
     .parallax-programacao {
         background-attachment: scroll;
     }
