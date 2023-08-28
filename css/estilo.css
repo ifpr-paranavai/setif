@@ -1,8 +1,14 @@
 /* NAVBAR */
 .gradiente-navbar {
     background-image: linear-gradient(to right, #2776A4, #464BA4, #AC32C8);
-    
-    
+
+
+}
+
+.logosetif {
+    padding-top: 100px;
+    text-align: center;
+    background-color: white;
 }
 
 .nav-link-personalizado:hover {
@@ -21,10 +27,11 @@
     width: 20%;
 }
 
-.container-fluid{
+.container-fluid {
     position: fixed;
 }
-.parallax-sobre, 
+
+.parallax-sobre,
 .parallax-localizacao,
 .parallax-programacao {
     position: relative;
@@ -40,12 +47,12 @@
 }
 
 .parallax-localizacao {
-    background-image: url("../imagens/imgIf.png");
+    background-image: url("../imagens/ponteiro-mapa.jpg");
     min-height: 100%;
 }
 
 .parallax-programacao {
-    background-image: url("../imagens/imgIf.png");
+    background-image: url("../imagens/ampulheta.jpg");
     min-height: 100%;
 }
 
@@ -71,4 +78,3 @@
         background-attachment: scroll;
     }
 }
-

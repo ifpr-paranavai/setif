@@ -10,7 +10,7 @@ $url = explode("/", $_SERVER['REQUEST_URI']);
 $paginaAtual = $url[array_key_last($url)];
 ?>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-fluid gradiente-navbar">
         <a class="navbar-brand" href="#">
             <img src="./imagens/logoNav.png" alt="Logo" width="100" class="d-inline-block align-text-top">
