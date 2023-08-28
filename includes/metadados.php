@@ -7,3 +7,4 @@
 <link href="bibliotecas/bootstrap-5.3.0/css/bootstrap.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700;800&display=swap" rel="stylesheet">
 <link rel="shortcut icon" href="imagens/" type="image/png">
+<link rel="stylesheet" href="bibliotecas/bootstrap-icons-1.10.5/font/bootstrap-icons.css">
