@@ -20,13 +20,14 @@
         }
     </style>
 
-    <div class="custom-background custom-font h-max-content d-block d-inline-block d-flex p-10px text-white d-flex flex-column p-10 w-max-content px-5 py-5">
+    <div class="custom-background custom-font h-max-content d-block d-inline-block d-flex p-10px text-white d-flex flex-column p-10 w-max-content px-5 py-5 text-center">
             <h1 class="mx-auto font-weight-bolder">Presidente
             </h1>
             <br>
             <h2 class="mx-auto">Marcelo Figueiredo Terenciani (IFPR)</h2>
             <br>
             <br>
+            <hr>
 
             <h1 class="mx-auto font-weight-bolder">Comitê Organizador da SETIF</h1> <br>
             <h2 class="mx-auto">
@@ -45,7 +46,8 @@
             <br>
             </h2>
             <br>
-            <h4 class="mx-auto">
+            <hr>
+            <h4 class="mx-auto my-2">
                 Maria Eduarda Fiorenzano Bruning <br>
                 Giovanna Bernadelli Souza Goes
             </h4>
