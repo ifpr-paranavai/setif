@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <div class="bg-success p-2 text-white mt-0" style="height: 100px; width: auto;"> </div>
+    <div class="bg-success p-2 text-white mt-0" style="height: 100px; width: auto;"> 
+    <i class="bi bi-envelope-at-fill" style="height:400px;"></i></div>
 </body>
 
 </html>
