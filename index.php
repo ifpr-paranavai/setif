@@ -12,7 +12,7 @@
   ?>
     <section class="parallax-sobre h-100">
         <div class="logosetif">
-            <img class="img-fluid" style="max-width: 30%" src="imagens/setifLogo.png" />
+            <img class="img-fluid" style="max-width: 60%" src="imagens/setifLogo.png" />
         </div>
         <div class="container text-white">
             <h1 class="fs-1 font-weight-bold m-5 p-3 text-uppercase text-center">

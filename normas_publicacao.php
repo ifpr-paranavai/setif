@@ -8,7 +8,7 @@
 
 <body>
   <?php include_once 'includes/navbar.php' ?>
-  <?php include_once 'includes/rodape.php' ?>
+  
 
   </head>
 
@@ -138,7 +138,7 @@
       <img style="width: 150px;height: 150px;border:2px solid #183276" class="rounded-4 mx-5" src="./imagens/Bd.png">
     </div>
 
-
+    <?php include_once 'includes/rodape.php' ?>
     <?php include_once 'includes/scripts.php' ?>
   </body>
 

@@ -8,8 +8,7 @@
 
 <body>
     <?php include_once 'includes/navbar.php' ?>
-    <?php include_once 'includes/rodape.php' ?>
-
+    
     <style>
         .custom-background {
             background-color: #464BA4;
@@ -51,6 +50,8 @@
             </h4>
 
     </div>
+    <?php include_once 'includes/rodape.php' ?>
+
 
     <?php include_once 'includes/scripts.php' ?>
 </body>
