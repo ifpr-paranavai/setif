@@ -1,3 +1,8 @@
+<?php 
+    require_once 'admin/includes/init.php'; 
+    include_once LIB_CONTROLLER.DS.'IndexController.class.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
