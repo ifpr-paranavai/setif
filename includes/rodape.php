@@ -1,3 +1,11 @@
+<?php 
+    require_once 'admin/includes/init.php'; 
+    include_once LIB_CONTROLLER.DS.'IndexController.class.php';
+
+    $controller = new IndexController();
+    $dados = $controller->getDadosPaginaInstitucional(2023);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,10 +25,10 @@
 
      <div class="d-flex align-bottom flex-row">
       <div><i class="bi bi-envelope-at-fill" style="font-size: 150%;"> </i> </div>
-      <div class="mx-2 my-2"> es.paranavai@ifpr.edu.br</div>
+      <div class="mx-2 my-2"><?= $dados->getEmail()?></div>
       
       <div><i class="bi bi-telephone-fill ms-2"  style="font-size: 150%;"></i> </div>
-      <div class="mx-2 my-2"> 	3482-0110</div>
+      <div class="mx-2 my-2"><?= $dados->getTelefone()?></div>
     </div>
 
 </body>
