@@ -1,42 +1,45 @@
-<?php	
-	include_once LIB_INCLUDES.DS.'Conexao.class.php';
-	include_once LIB_MODEL.DS.'Institucional.class.php';
-	
-	class DaoInstitucional {
+<?php
+include_once LIB_INCLUDES . DS . 'Conexao.class.php';
+include_once LIB_MODEL . DS . 'Institucional.class.php';
 
-		public static $instancia;
+class DaoInstitucional
+{
 
-		public static function getInstancia() {
-			if (!isset(self::$instancia))
-				self::$instancia = new DaoInstitucional();
-			
-			return self::$instancia;
-		}
+	public static $instancia;
 
-		public function getDadosPaginaInstitucional($ano) {
-			try {
-				$sql = "SELECT * FROM tb_institucional WHERE ano=:ano ORDER BY data_atualizacao DESC LIMIT 1";
-				$sqlPreparada = Conexao::getInstancia()->prepare($sql);
-                $sqlPreparada->bindValue(":ano", $ano);
-                $resultado=$sqlPreparada->execute();
-				$row = $resultado->fetchAll(PDO::FETCH_ASSOC);
-				return $this->populaInstitucional($row[0]);
-			} catch (Exception $e) {
-				print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
-			}
-		}
-		private function populaInstitucional($row) {
-			$institucional = new Institucional();
+	public static function getInstancia()
+	{
+		if (!isset(self::$instancia))
+			self::$instancia = new DaoInstitucional();
 
-			$institucional->setIdInstitucional($row['id_institucional']);
-			$institucional->setTextoSobre($row['texto_sobre']);
-			$institucional->setProgramacao($row['programacao']);
-			$institucional->setLocalizacao($row['localizacao']);
-			$institucional->setEmail($row['email']);
-			$institucional->setTelefone($row['telefone']);
-			$institucional->setDataAtualizacao($row['data_atualizacao']);
-			$institucional->setAno($row['ano']);
-			return $institucional;
+		return self::$instancia;
+	}
+
+	public function getDadosPaginaInstitucional($ano)
+	{
+		try {
+			$sql = "SELECT * FROM tb_institucional WHERE ano=:ano ORDER BY data_atualizacao DESC LIMIT 1";
+			$sqlPreparada = Conexao::getInstancia()->prepare($sql);
+			$sqlPreparada->bindValue(":ano", $ano);
+			$resultado = $sqlPreparada->execute();
+			return $this->populaInstitucional($sqlPreparada->fetch(PDO::FETCH_ASSOC));
+		} catch (Exception $e) {
+			print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
 		}
 	}
+	private function populaInstitucional($row)
+	{
+		$institucional = new Institucional();
+
+		$institucional->setIdInstitucional($row['id_institucional']);
+		$institucional->setTextoSobre($row['texto_sobre']);
+		$institucional->setProgramacao($row['programacao']);
+		$institucional->setLocalizacao($row['localizacao']);
+		$institucional->setEmail($row['email']);
+		$institucional->setTelefone($row['telefone']);
+		$institucional->setDataAtualizacao($row['data_atualizacao']);
+		$institucional->setAno($row['ano']);
+		return $institucional;
+	}
+}
 ?>

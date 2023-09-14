@@ -1,5 +1,5 @@
 <?php
-class Instituicao
+class Institucional
 {
 
     private $idInstitucional;

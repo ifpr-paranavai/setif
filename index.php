@@ -1,6 +1,10 @@
 <?php 
     require_once 'admin/includes/init.php'; 
     include_once LIB_CONTROLLER.DS.'IndexController.class.php';
+
+    $controller = new IndexController();
+    $dados = $controller->getDadosPaginaInstitucional(2023);
+    var_dump($dados);
 ?>
 
 <!DOCTYPE html>
