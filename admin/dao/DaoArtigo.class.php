@@ -14,31 +14,29 @@ class DaoArtigo
 			print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
 		}
 	}
-	/*public function getDadosPaginaInstitucional($ano) 
+	public function getArtigosPorAno($ano) 
 	{
 		try {
-			$sql = "SELECT * FROM tb_institucional WHERE ano=:ano ORDER BY data_atualizacao DESC LIMIT 1";
+			$sql = "SELECT * FROM tb_artigo WHERE ano=:ano ORDER BY titulo ASC";
 			$sqlPreparada = Conexao::getInstancia()->prepare($sql);
 			$sqlPreparada->bindValue(":ano", $ano);
 			$resultado = $sqlPreparada->execute();
-			return $this->populaInstitucional($sqlPreparada->fetch(PDO::FETCH_ASSOC));
+			return $this->populaArtigo($sqlPreparada->fetch(PDO::FETCH_ASSOC));
 		} catch (Exception $e) {
 			print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
 		}
 	}
-	private function populaInstitucional($row)
+	private function populaArtigo($row)
 	{
-		$institucional = new Institucional();
+		$artigo = new Artigo();
 
-		$institucional->setIdInstitucional($row['id_institucional']);
-		$institucional->setTextoSobre($row['texto_sobre']);
-		$institucional->setProgramacao($row['programacao']);
-		$institucional->setLocalizacao($row['localizacao']);
-		$institucional->setEmail($row['email']);
-		$institucional->setTelefone($row['telefone']);
-		$institucional->setDataAtualizacao($row['data_atualizacao']);
-		$institucional->setAno($row['ano']);
-		return $institucional;
-	} */
+		$artigo->setIdArtigo($row['id_artigo']);
+		$artigo->setTitulo($row['titulo']);
+		$artigo->setLink($row['link']);
+		$artigo->setAutores($row['autores']);
+		$artigo->setAno($row['ano']);
+		$artigo->setTipo($row['tipo']);
+		return $artigo;
+	} 
 }
 ?>
