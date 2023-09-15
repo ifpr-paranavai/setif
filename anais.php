@@ -42,6 +42,14 @@ include_once("./includes/navbar.php");
         <a href="./anais/anais2016.php" class="mx-4 botao-estilo7 fs-2 btn rounded-4 btn-primary mx-10 w-45 h-45 text-center py-3 p-5">Anais
             2016</a>
 
+         <?php
+             require_once 'admin/includes/init.php'; 
+             include_once LIB_CONTROLLER.DS.'AnaisController.class.php';
+         
+             $controller = new AnaisController();
+             $anos = $controller->getAnosDasEdicoesAnteriores();
+            print_r($anos);
+         ?>
         <style>    
 
         .botao-estilo{
