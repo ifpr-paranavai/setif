@@ -2,7 +2,7 @@
 $paginas = array(
     array("index.php", "Apresentação"),
     array("normas_publicacao.php", "Normas de Publicação"),
-    array("anaisEventos.php", "Anais do Evento"),
+    array("anais.php", "Anais do Evento"),
     array("corpoEditorial.php", "Corpo Editorial"),
     array("fotos.php", "Fotos")
 );

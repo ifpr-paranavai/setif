@@ -71,6 +71,16 @@
   
 }
 
+.botao-anais{
+    background-color: #183276 !important;
+    color:white !important;
+}
+
+.botao-anais:hover {
+    background-color: #A6B9EB !important;
+    opacity: 0.9  !important;
+    
+}
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
 

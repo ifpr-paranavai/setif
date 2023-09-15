@@ -4,22 +4,12 @@ include_once LIB_MODEL . DS . 'Artigo.class.php';
 
 class DaoArtigo
 {
-
-	public static $instancia;
-
-	public static function getInstancia()
-	{
-		if (!isset(self::$instancia))
-			self::$instancia = new DaoArtigo();
-
-		return self::$instancia;
-	}
  	public function getAnosDasEdicoesAnteriores(){
 		try {
 			$sql = "SELECT ano FROM tb_artigo GROUP BY ano";
 			$sqlPreparada = Conexao::getInstancia()->prepare($sql);
 			 $sqlPreparada->execute();
-			return $sqlPreparada->fetchAll(PDO::FETCH_ASSOC);
+			return $sqlPreparada->fetchAll(PDO::FETCH_COLUMN);
 		} catch (Exception $e) {
 			print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
 		}

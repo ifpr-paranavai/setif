@@ -4,17 +4,6 @@ include_once LIB_MODEL . DS . 'Institucional.class.php';
 
 class DaoInstitucional
 {
-
-	public static $instancia;
-
-	public static function getInstancia()
-	{
-		if (!isset(self::$instancia))
-			self::$instancia = new DaoInstitucional();
-
-		return self::$instancia;
-	}
-
 	public function getDadosPaginaInstitucional($ano)
 	{
 		try {

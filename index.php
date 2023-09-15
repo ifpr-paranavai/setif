@@ -1,9 +1,9 @@
-<?php 
-    require_once 'admin/includes/init.php'; 
-    include_once LIB_CONTROLLER.DS.'IndexController.class.php';
+<?php
+require_once 'admin/includes/init.php';
+include_once LIB_CONTROLLER . DS . 'IndexController.class.php';
 
-    $controller = new IndexController();
-    $dados = $controller->getDadosPaginaInstitucional(2023);
+$controller = new IndexController();
+$dados = $controller->getDadosPaginaInstitucional(2023);
 ?>
 
 <!DOCTYPE html>
@@ -16,8 +16,8 @@
 
 <body>
     <?php
-  include_once 'includes/navbar.php';
-  ?>
+    include_once 'includes/navbar.php';
+    ?>
     <section class="parallax-sobre h-100">
         <div class="logosetif">
             <img class="img-fluid" style="max-width: 60%" src="imagens/setifLogo.png" />
@@ -26,7 +26,7 @@
             <h1 class="fs-1 font-weight-bold m-5 p-3 text-uppercase text-center">
                 Sobre o Evento
             </h1>
-            <?= $dados->getTextoSobre()?>
+            <?= $dados->getTextoSobre() ?>
         </div>
     </section>
 
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                <?= $dados->getProgramacao()?>
+                <?= $dados->getProgramacao() ?>
             </div>
         </div>
     </section>
@@ -58,7 +58,7 @@
                     </div>
                 </div>
             </div>
-            <?= $dados->getLocalizacao()?>
+            <?= $dados->getLocalizacao() ?>
         </div>
     </section>
     <?php include_once 'includes/rodape.php' ?>
