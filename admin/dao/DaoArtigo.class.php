@@ -37,7 +37,6 @@ class DaoArtigo
 	}
 	private function populaArtigo($row)
 	{
-		print_r($row);
 		$artigo = new Artigo();
 
 		$artigo->setIdArtigo($row['id_artigo']);
