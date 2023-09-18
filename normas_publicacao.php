@@ -156,6 +156,7 @@
         <a class="btn btn-primary link rounded-4 mx-4 align-middle" href="https://portal.unigranrio.edu.br/blog/o-que-e-sistemas-de-informacao" role="button" style="background-image: url('./imagens/SistemasInformação.png">
           <label for="" style="font-size: larger"><br>Sistemas <br> de <br>Informação</label></a>
       </div>
+      
 
       <div style="margin-top: 50px;">
         <a class="btn btn-primary link rounded-4 mx-4 align-middle" href="https://movplan.com.br/blog/entenda-como-o-uso-da-informatica-na-educacao-impacta-nos-resultados/#:~:text=O%20uso%20da%20inform%C3%A1tica%20na%20educa%C3%A7%C3%A3o%20pode%20ter%20muitos%20benef%C3%ADcios,compartilhados%20e%20at%C3%A9%20fa%C3%A7am%20provas." role="button" style="background-image: url('./imagens/InfoEducacao.png">
