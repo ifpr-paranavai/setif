@@ -1,3 +1,10 @@
+<?php
+
+require_once 'admin/includes/init.php';
+include_once LIB_CONTROLLER . DS . 'NormasPublicacaoController.class.php';
+$controller = new NormasPublicacaoController();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -8,11 +15,7 @@
 
 <body>
   <?php include_once 'includes/navbar.php' ?>
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> 9950d31b8e13928438520df3c85ebd0f0007f121
 
   </head>
 
@@ -147,8 +150,16 @@
       <h1 class="fs-1 text-white font-weight-bold my-5 text-center">Tópicos de interesse</h1> <br>
 
       <div class="">
-        <a class="btn btn-primary link rounded-4 mx-4 align-middle" href="https://www.techtudo.com.br/noticias/2023/03/o-que-e-arquitetura-de-computadores-entenda-uso-do-termo-na-informatica-edinfoeletro.ghtml" role="button" style="background-image: url('./imagens/Eng.Computadores.png');"><br>
-          <label for="" style="font-size: larger;">Arquitetura <br> de Computadores</label></a>
+        <?php
+        $topicosDeInteresses = $controller->getTopicosDeInteresse();
+        foreach ($topicosDeInteresses as $topicoDeInteresse) :
+        ?>
+          <a class="btn btn-primary link rounded-4 mx-4 align-middle" href="https://www.techtudo.com.br/noticias/2023/03/o-que-e-arquitetura-de-computadores-entenda-uso-do-termo-na-informatica-edinfoeletro.ghtml" role="button" style="background-image: url('<?= $topicoDeInteresse->getLinkImagem() ?>');"><br>
+            <label for="" style="font-size: larger;"><?= $topicoDeInteresse->getNome() ?></label></a>
+        <?php
+        endforeach;
+        ?>
+
         <a class="btn btn-primary link rounded-4 mx-4 align-middle" href="https://4infra.com.br/automacao-industrial-e-robotica/" role="button" style="background-image: url('./imagens/Automação\ e\ Robótica.png');"><br>
           <label for="" style="font-size: larger;">Automação <br> e <br> Robótica</label></a>
         <a class="btn btn-primary link rounded-4 mx-4 align-middle" href="https://www.oracle.com/br/database/what-is-database/#:~:text=Um%20banco%20de%20dados%20%C3%A9,banco%20de%20dados%20(DBMS)." role="button" style="background-image: url('./imagens/Banco\ de\ Dados.png');"><br>
@@ -160,6 +171,7 @@
         <a class="btn btn-primary link rounded-4 mx-4 align-middle" href="https://portal.unigranrio.edu.br/blog/o-que-e-sistemas-de-informacao" role="button" style="background-image: url('./imagens/SistemasInformação.png">
           <label for="" style="font-size: larger"><br>Sistemas <br> de <br>Informação</label></a>
       </div>
+
 
       <div style="margin-top: 50px;" class="">
         <a class="btn btn-primary link rounded-4 mx-4 align-middle" href="https://movplan.com.br/blog/entenda-como-o-uso-da-informatica-na-educacao-impacta-nos-resultados/#:~:text=O%20uso%20da%20inform%C3%A1tica%20na%20educa%C3%A7%C3%A3o%20pode%20ter%20muitos%20benef%C3%ADcios,compartilhados%20e%20at%C3%A9%20fa%C3%A7am%20provas." role="button" style="background-image: url('./imagens/InfoEducacao.png">
@@ -175,7 +187,7 @@
         <a class="btn btn-primary link rounded-4 mx-4 align-middle" href="" role="button" style="background-image: url('./imagens/passaro.jpg)">
           <label style=" font-size: larger"><br>Teste</label></a>
       </div>
-      
+
 
 
     </div>
