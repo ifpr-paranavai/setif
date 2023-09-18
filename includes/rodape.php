@@ -8,7 +8,7 @@ $dados = $controller->getDadosPaginaInstitucional(2023);
 
 
 
-<footer class="fixed-bottom py-3 bg-success text-white">
+<footer class="py-3 bg-success text-white">
     <div class="d-flex flex-row my-4 justify-content-center">
         <i class="bi bi-person-fill d-block" style="font-size: 200%;">Contatos</i>
     </div>
