@@ -1,31 +1,37 @@
+
+<?php
+
+require_once 'admin/includes/init.php';
+include_once LIB_CONTROLLER . DS . 'MidiaController.class.php';
+$controller = new MidiaController();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-    <title>Fotos</title>
-    <?php include_once 'includes/metadados.php' ?>
-    <?php include_once 'includes/navbar.php' ?>
-    <?php include_once 'includes/rodape.php' ?>
-    <?php include_once 'includes/scripts.php' ?>
+  <title>Fotos</title>
+
 </head>
 
 <body>
-    <session class="fotos">
+  <session class="fotos">
 
-    <div class="position-relative">
-  <div class="position-absolute top-0 start-0 "></div>
-  <div class="position-absolute top-0 start-50 translate-middle-x"></div>
-  <div class="position-absolute top-0 end-0"></div>
-  <div class="position-absolute top-50 start-0 translate-middle-y"></div>
-  <div class="position-absolute top-50 start-50 translate-middle"></div>
-  <div class="position-absolute top-50 end-0 translate-middle-y"></div>
-  <div class="position-absolute bottom-0 start-0"></div>
-  <div class="position-absolute bottom-0 start-50 translate-middle-x"></div>
-  <div class="position-absolute bottom-0 end-0"></div>
-</div>
+    <div class="container px-auto py-5 mx-auto">
+      <?php
+      foreach ($midias as $midia):
+        ?>
+        <img class="my-auto" style="width: 720px; margin-left: 80px;" src="<?= $artigo->getLink() ?>">
 
-</session> 
-    
+    </div>
+      <?php
+      endforeach;
+      ?>
+  </session>
+  <?php include_once 'includes/metadados.php' ?>
+  <?php include_once 'includes/navbar.php' ?>
+  <?php include_once 'includes/rodape.php' ?>
+  <?php include_once 'includes/scripts.php' ?>
 </body>
 
 </html>

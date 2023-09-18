@@ -8,7 +8,11 @@
 
 <body>
   <?php include_once 'includes/navbar.php' ?>
+<<<<<<< HEAD
+  
+=======
 
+>>>>>>> 9950d31b8e13928438520df3c85ebd0f0007f121
 
   </head>
 
@@ -138,7 +142,7 @@
 
     </div>
 
-    <div class="topico interesse px-5" style="position: relative;background-color: #2EA75A; display:block; padding:10px;">
+    <div class="topico interesse px-5 mb-2" style="position: relative;background-color: #2EA75A; display:block; padding:10px;">
 
       <h1 class="fs-1 text-white font-weight-bold my-5 text-center">Tópicos de interesse</h1> <br>
 
@@ -158,7 +162,7 @@
       </div>
       
 
-      <div style="margin-top: 50px;">
+      <div style="margin-top: 50px;" class="">
         <a class="btn btn-primary link rounded-4 mx-4 align-middle" href="https://movplan.com.br/blog/entenda-como-o-uso-da-informatica-na-educacao-impacta-nos-resultados/#:~:text=O%20uso%20da%20inform%C3%A1tica%20na%20educa%C3%A7%C3%A3o%20pode%20ter%20muitos%20benef%C3%ADcios,compartilhados%20e%20at%C3%A9%20fa%C3%A7am%20provas." role="button" style="background-image: url('./imagens/InfoEducacao.png">
           <label for="" style="font-size: larger"><br>Informática <br>na<br>Educação</label></a>
         <a class="btn btn-primary link rounded-4 mx-4 align-middle" href="https://online.pucrs.br/blog/inteligencia-artificial?utm_source=google&utm_medium=cpc&&hsa_cam=14586991824&hsa_grp=&utm_term=&hsa_ad=&utm_term=&utm_medium=ppc&utm_campaign=%5BMP%5D+CONV+-++Institucional+e+%C3%81reas&utm_source=adwords&hsa_ver=3&hsa_cam=14586991824&hsa_kw=&hsa_acc=8414866364&hsa_net=adwords&hsa_grp=&hsa_mt=&hsa_ad=&hsa_tgt=&hsa_src=x&gad=1&gclid=Cj0KCQjwi7GnBhDXARIsAFLvH4nHqIkANcAxjDqJCo1NMpI-WdktWlsPiT5XCqTVEwdRSDHhEaywBLwaAqYdEALw_wcB" role="button" style="background-image: url('./imagens/IA.png">
@@ -169,13 +173,15 @@
           <label for="" style="font-size: larger"><br>Redes e <br>Sistemas <br>Distribuídos</label></a>
         <a class="btn btn-primary link rounded-4 mx-4 align-middle" href="https://www.alura.com.br/artigos/sistemas-operacionais-conceito-estrutura#:~:text=Fundamentalmente%2C%20um%20sistema%20operacional%20%C3%A9,o%20hardware%20da%20sua%20m%C3%A1quina." role="button" style="background-image: url('./imagens/SO.png">
           <label for="" style="font-size: larger"><br>Sistemas<br>Operacionais</label></a>
-        <a class="btn btn-primary link rounded-4 mx-4 align-middle" href="" role="button" style="background-image: url('./imagens/passaro.jpg)
-          <label for="" style=" font-size: larger"><br>Teste</label></a>
+        <a class="btn btn-primary link rounded-4 mx-4 align-middle" href="" role="button" style="background-image: url('./imagens/passaro.jpg)">
+          <label style=" font-size: larger"><br>Teste</label></a>
       </div>
-
+      
 
 
     </div>
+
+
 
     <?php include_once 'includes/rodape.php' ?>
     <?php include_once 'includes/scripts.php' ?>

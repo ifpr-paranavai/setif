@@ -8,8 +8,7 @@
 
 <body>
     <?php include_once 'includes/navbar.php' ?>
-    <?php include_once 'includes/rodape.php' ?>
-
+    
     <style>
         .custom-background {
             background-color: #464BA4;
@@ -20,7 +19,7 @@
         }
     </style>
 
-    <div class="custom-background custom-font h-max-content d-block d-inline-block d-flex p-10px text-white d-flex flex-column p-10 w-max-content px-5 py-5 text-center">
+    <div class="custom-background custom-font h-max-content d-block d-inline-block d-flex p-10px text-white d-flex flex-column p-10 w-max-content px-5 py-5 text-center mb-3">
             <h1 class="mx-auto font-weight-bolder">Presidente
             </h1>
             <br>
@@ -53,6 +52,8 @@
             </h4>
 
     </div>
+    <?php include_once 'includes/rodape.php' ?>
+
 
     <?php include_once 'includes/scripts.php' ?>
 </body>

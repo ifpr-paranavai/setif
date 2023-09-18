@@ -47,12 +47,13 @@
 }
 
 .parallax-localizacao {
-    background-image: url("../imagens/ponteiro-mapa.jpg");
+    background-image: url("../imagens/ifpr2.jpg");
     min-height: 100%;
+    
 }
 
 .parallax-programacao {
-    background-image: url("../imagens/ampulheta.jpg");
+    background-image: url("../imagens/ifpr3.png");
     min-height: 100%;
 }
 
@@ -67,8 +68,19 @@
     width: 100%;
     margin-top: 15px;
     height: 500px;
+  
 }
 
+.botao-anais{
+    background-color: #183276 !important;
+    color:white !important;
+}
+
+.botao-anais:hover {
+    background-color: #A6B9EB !important;
+    opacity: 0.9  !important;
+    
+}
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
 
