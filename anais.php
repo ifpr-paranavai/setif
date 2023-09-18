@@ -19,7 +19,7 @@ $controller = new AnaisController();
     include_once 'includes/navbar.php';
     ?>
 
-    <div class="container text-center my-5 py-5">
+    <div class="container text-center my-5 py-5 p-5">
         <?php
         if (isset($_GET['ano'])):
             $artigos = $controller->getArtigosPorAno($_GET['ano']);

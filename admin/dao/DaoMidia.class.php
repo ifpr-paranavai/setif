@@ -2,7 +2,7 @@
 include_once LIB_INCLUDES . DS . 'Conexao.class.php';
 include_once LIB_MODEL . DS . 'Midia.class.php';
 
-class DaoArtigo
+class DaoMidia
 {
 
 	public function getMidiaPorAno($ano)
