@@ -239,7 +239,7 @@ CREATE TABLE `tb_midia` (
   `id_midia` int(11) NOT NULL,
   `link` text NOT NULL,
   `titulo` varchar(250) NOT NULL,
-  `ano` date NOT NULL
+  `ano` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --

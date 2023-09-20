@@ -1,13 +1,10 @@
 <?php
 class Midia
 {
-
     private $idMidia;
     private $link;
     private $titulo;
     private $ano;
-    
-
 
     public function getIdMidia()
     {

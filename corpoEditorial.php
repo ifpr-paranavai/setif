@@ -28,6 +28,8 @@
             <br>
             <hr>
 
+            <img class="my-auto" style="width: 720px; margin-left: 80px;" src="">
+
             <h1 class="mx-auto font-weight-bolder">Comitê Organizador da SETIF</h1> <br>
             <h2 class="mx-auto">
 

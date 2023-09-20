@@ -2,13 +2,24 @@
 include_once LIB_INCLUDES . DS . 'Conexao.class.php';
 include_once LIB_MODEL . DS . 'Midia.class.php';
 
-class DaoArtigo
+class DaoMidia
 {
 
-	public function getMidiaPorAno($ano)
+	public function getAnosMidia()
 	{
 		try {
-			$sql = "SELECT * FROM tb_midia WHERE ano=:ano ORDER BY date_field ASC";
+			$sql = "SELECT ano FROM tb_midia GROUP BY ano";
+			$sqlPreparada = Conexao::getInstancia()->prepare($sql);
+			$sqlPreparada->execute();
+			return $sqlPreparada->fetchAll(PDO::FETCH_COLUMN);
+		} catch (Exception $e) {
+			print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
+		}
+	}
+	public function getMidiaPorLink($ano)
+	{
+		try {
+			$sql = "SELECT * FROM tb_midia WHERE ano=:ano";
 
 			$sqlPreparada = Conexao::getInstancia()->prepare($sql);
 			$sqlPreparada->bindValue(":ano", $ano);
