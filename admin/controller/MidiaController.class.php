@@ -1,7 +1,7 @@
 <?php
 	include_once LIB_DAO.DS.'DaoMidia.class.php';
 	
-  	class AnaisController{
+  	class MidiaController{
 		public function getMidia(){
 			try {
 				$daoMidia = new DaoMidia();
