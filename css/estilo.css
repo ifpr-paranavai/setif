@@ -80,6 +80,16 @@
     background-color: #A6B9EB !important;
     opacity: 0.9  !important;
     
+
+    
+}
+
+.custom-background {
+    background-color: #464BA4;
+}
+
+.custom-font {
+    font-family: 'Open Sans', sans-serif;
 }
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {

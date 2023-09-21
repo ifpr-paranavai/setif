@@ -29,7 +29,7 @@ $controller = new MidiaController();
 
 
             <button type="button" data-bs-target="#carouselExampleDark"
-              data-bs-slide-to="<?= $midia->getIdMidia() ?>"></button>
+              data-bs-slide-to="<?= $midia->getIdMidia()?>"></button>
 
               <?php
           endforeach;
@@ -41,7 +41,7 @@ $controller = new MidiaController();
           foreach ($midias as $midia):
             ?>
             <div class="carousel-item" data-bs-interval="10000">
-              <img src="<?= $midia->getLink() ?>" class="d-block w-100">
+              <img src="<?= $midia->getLink()?>" class="d-block w-100">
           </div>
           <?php
           endforeach;
