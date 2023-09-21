@@ -49,7 +49,7 @@ $normas = $controller->getNormasPublicacao('2023');
     include_once 'includes/navbar.php';
     ?>
 
-    <div class="container px-0 m-0">
+    <div class="container m-0 mt-5 p-0 pt-5">
       <div class="row">
         <div class="col">
           <div class="col w-40 datas importantes custom-background h-max-content d-block d-inline-block d-flex p-10px text-white d-flex flex-column p-10">
@@ -97,7 +97,7 @@ $normas = $controller->getNormasPublicacao('2023');
               Os artigos completos devem possuir no máximo 12 páginas. A formatação dos artigos deve seguir o modelo da SBC para artigos acadêmicos:
               Utilizar preferencialmente o LaTeX: Overleaf
               <br>
-              Modelo SBC-Artigo: <a href="" class="rounded-pill btn btn-light btn-outline-success" role=" button">Clique aqui</a>
+              Modelo SBC-Artigo: <a href="https://drive.google.com/file/d/0B_jYjhszA34iSnE2SC1OV0dVNlU/view?usp=sharing" class="rounded-pill btn btn-light btn-outline-success" role=" button">Clique aqui</a>
             </h5>
             <br>
 
@@ -107,12 +107,11 @@ $normas = $controller->getNormasPublicacao('2023');
               Utilizar preferencialmente o LaTeX: Overleaf
               Não incluir abstract e o resumo no modelo latex
               <br>
-              Modelo SBC-Resumo: <a href="" class="rounded-pill btn btn-light btn-outline-success" role=" button">Clique aqui</a>
+              Modelo SBC-Resumo: <a href="https://drive.google.com/file/d/1TynchfNXbA9s7D45vYHh176xOfZ7rTRy/view" class="rounded-pill btn btn-light btn-outline-success" role=" button">Clique aqui</a>
             </h5>
             <br>
 
 
-            
           </div>
 
         </div>

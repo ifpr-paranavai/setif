@@ -13,9 +13,6 @@ class NormasPublicacao
     private $tempoApresentacaoArtigo;
     private $ano;
 
-
-
-
     public function getIdNormas()
     {
         return $this->idNormas;
@@ -81,7 +78,7 @@ class NormasPublicacao
 
     public function setTempoApresentacaoResumo($tempoApresentacaoResumo)
     {
-        $this->dataFinalEvento = $tempoApresentacaoResumo;
+        $this->tempoApresentacaoResumo = $tempoApresentacaoResumo;
     }
 
     public function getTempoApresentacaoArtigo()
@@ -91,7 +88,7 @@ class NormasPublicacao
 
     public function setTempoApresentacaoArtigo($tempoApresentacaoArtigo)
     {
-        $this->dataFinalEvento = $tempoApresentacaoArtigo;
+        $this->tempoApresentacaoArtigo = $tempoApresentacaoArtigo;
     }
 
     public function getAno()
@@ -101,7 +98,7 @@ class NormasPublicacao
 
     public function setAno($ano)
     {
-        $this->dataFinalEvento = $ano;
+        $this->ano = $ano;
     }
 
     public function getDataMostraTrabalho()
@@ -111,7 +108,7 @@ class NormasPublicacao
 
     public function setDataMostraTrabalho($dataMostraTrabalho)
     {
-        $this->dataFinalEvento = $dataMostraTrabalho;
+        $this->dataMostraTrabalho = $dataMostraTrabalho;
     }
 
 }
