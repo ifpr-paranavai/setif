@@ -5,26 +5,27 @@ include_once LIB_MODEL . DS . 'CorpoEditorial.class.php';
 class DaoCorpoEditorial
 {
 
-	public function getCorpoEditorialNome($nome)
+	public function getCorpoEditorialPorAno($ano)
 	{
 		try {
-			$sql = "SELECT * FROM tb_corpoEditorial WHERE nome=:nome ORDER BY date_field ASC";
+			$sql = "SELECT * FROM tb_corpo_editorial WHERE ano=:ano ORDER BY nome ASC";
 
 			$sqlPreparada = Conexao::getInstancia()->prepare($sql);
-			$sqlPreparada->bindValue(":nome", $nome);
+			$sqlPreparada->bindValue(":ano", $ano);
 			$sqlPreparada->execute();
 
-			$nomesBD = $sqlPreparada->fetchAll(PDO::FETCH_ASSOC);
-			$nomes = array();
-			foreach ($nomesBD as $nome):
-				$corpoEditorial[] = $this->populaCorpoEditorial($nome);
+			$membrosBD = $sqlPreparada->fetchAll(PDO::FETCH_ASSOC);
+			$membros = array();
+			foreach ($membrosBD as $membro):
+				$membros[] = $this->populaCorpoEditorial($membro);
 			endforeach;
 
-			return $nomes;
+			return $membros;
 		} catch (Exception $e) {
 			print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
 		}
 	}
+
 	private function populaCorpoEditorial($row)
 	{
 		$corpoEditorial = new CorpoEditorial();

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 18-Set-2023 às 22:53
--- Versão do servidor: 10.4.27-MariaDB
--- versão do PHP: 8.2.0
+-- Tempo de geração: 21/09/2023 às 21:55
+-- Versão do servidor: 10.4.28-MariaDB
+-- Versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tb_artigo`
+-- Estrutura para tabela `tb_artigo`
 --
 
 CREATE TABLE `tb_artigo` (
@@ -37,7 +37,7 @@ CREATE TABLE `tb_artigo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Extraindo dados da tabela `tb_artigo`
+-- Despejando dados para a tabela `tb_artigo`
 --
 
 INSERT INTO `tb_artigo` (`id_artigo`, `titulo`, `link`, `autores`, `ano`, `tipo`) VALUES
@@ -208,7 +208,28 @@ INSERT INTO `tb_artigo` (`id_artigo`, `titulo`, `link`, `autores`, `ano`, `tipo`
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tb_institucional`
+-- Estrutura para tabela `tb_corpo_editorial`
+--
+
+CREATE TABLE `tb_corpo_editorial` (
+  `id_corpo_editorial` int(11) NOT NULL,
+  `nome` text NOT NULL,
+  `funcao` text NOT NULL,
+  `ano` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `tb_corpo_editorial`
+--
+
+INSERT INTO `tb_corpo_editorial` (`id_corpo_editorial`, `nome`, `funcao`, `ano`) VALUES
+(1, 'Marcelo Figueiredo Terenciani', 'Presidente', 2023),
+(2, 'Eduardo Henrique Molina da Cruz', 'Organizador', 2023);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `tb_institucional`
 --
 
 CREATE TABLE `tb_institucional` (
@@ -223,7 +244,7 @@ CREATE TABLE `tb_institucional` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `tb_institucional`
+-- Despejando dados para a tabela `tb_institucional`
 --
 
 INSERT INTO `tb_institucional` (`id_institucional`, `texto_sobre`, `programacao`, `localizacao`, `email`, `telefone`, `data_atualizacao`, `ano`) VALUES
@@ -232,7 +253,7 @@ INSERT INTO `tb_institucional` (`id_institucional`, `texto_sobre`, `programacao`
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tb_midia`
+-- Estrutura para tabela `tb_midia`
 --
 
 CREATE TABLE `tb_midia` (
@@ -243,16 +264,18 @@ CREATE TABLE `tb_midia` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `tb_midia`
+-- Despejando dados para a tabela `tb_midia`
 --
 
 INSERT INTO `tb_midia` (`id_midia`, `link`, `titulo`, `ano`) VALUES
-(1, 'https://tecnoif.com.br/setif/admin/uploads/bb06f0a38d4f0d65a69295365ddc12f4a7c68ca8.jpg', 'setif 2018', '2016-11-02');
+(1, './imagens/fotoSetif.jpg', 'setif 2018', 2016),
+(2, './imagens/fotoSetif2.jpg', '', 2018),
+(3, './imagens/fotoSetif3.jpg', '', 2016);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tb_normas_publicacao`
+-- Estrutura para tabela `tb_normas_publicacao`
 --
 
 CREATE TABLE `tb_normas_publicacao` (
@@ -269,7 +292,7 @@ CREATE TABLE `tb_normas_publicacao` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `tb_normas_publicacao`
+-- Despejando dados para a tabela `tb_normas_publicacao`
 --
 
 INSERT INTO `tb_normas_publicacao` (`id_normas_publicacao`, `data_limite`, `data_notificacao_autor`, `data_versao_final`, `data_inicio_evento`, `data_final_evento`, `data_mostra_trabalho`, `tempo_apresentacao_resumo`, `tempo_apresentacao_artigo`, `ano`) VALUES
@@ -279,7 +302,7 @@ INSERT INTO `tb_normas_publicacao` (`id_normas_publicacao`, `data_limite`, `data
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tb_topico_de_interesse`
+-- Estrutura para tabela `tb_topico_de_interesse`
 --
 
 CREATE TABLE `tb_topico_de_interesse` (
@@ -289,7 +312,7 @@ CREATE TABLE `tb_topico_de_interesse` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `tb_topico_de_interesse`
+-- Despejando dados para a tabela `tb_topico_de_interesse`
 --
 
 INSERT INTO `tb_topico_de_interesse` (`id_topico_de_interesse`, `nome`, `link_imagem`) VALUES
@@ -301,37 +324,31 @@ INSERT INTO `tb_topico_de_interesse` (`id_topico_de_interesse`, `nome`, `link_im
 --
 
 --
--- Índices para tabela `tb_artigo`
+-- Índices de tabela `tb_artigo`
 --
 ALTER TABLE `tb_artigo`
   ADD PRIMARY KEY (`id_artigo`);
 
 --
--- Índices para tabela `tb_institucional`
+-- Índices de tabela `tb_corpo_editorial`
+--
+ALTER TABLE `tb_corpo_editorial`
+  ADD PRIMARY KEY (`id_corpo_editorial`);
+
+--
+-- Índices de tabela `tb_institucional`
 --
 ALTER TABLE `tb_institucional`
   ADD PRIMARY KEY (`id_institucional`);
 
 --
--- Índices para tabela `tb_midia`
+-- Índices de tabela `tb_midia`
 --
 ALTER TABLE `tb_midia`
   ADD PRIMARY KEY (`id_midia`);
 
 --
--- Índices para tabela `tb_normas_publicacao`
---
-ALTER TABLE `tb_normas_publicacao`
-  ADD PRIMARY KEY (`id_normas_publicacao`);
-
---
--- Índices para tabela `tb_topico_de_interesse`
---
-ALTER TABLE `tb_topico_de_interesse`
-  ADD PRIMARY KEY (`id_topico_de_interesse`);
-
---
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
@@ -339,6 +356,12 @@ ALTER TABLE `tb_topico_de_interesse`
 --
 ALTER TABLE `tb_artigo`
   MODIFY `id_artigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=204;
+
+--
+-- AUTO_INCREMENT de tabela `tb_corpo_editorial`
+--
+ALTER TABLE `tb_corpo_editorial`
+  MODIFY `id_corpo_editorial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `tb_institucional`
@@ -350,19 +373,7 @@ ALTER TABLE `tb_institucional`
 -- AUTO_INCREMENT de tabela `tb_midia`
 --
 ALTER TABLE `tb_midia`
-  MODIFY `id_midia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT de tabela `tb_normas_publicacao`
---
-ALTER TABLE `tb_normas_publicacao`
-  MODIFY `id_normas_publicacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT de tabela `tb_topico_de_interesse`
---
-ALTER TABLE `tb_topico_de_interesse`
-  MODIFY `id_topico_de_interesse` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_midia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
