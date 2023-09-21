@@ -1,52 +1,99 @@
 <?php
-class Artigo
+class NormasPublicacao
 {
 
-    private $idArtigo;
-    private $titulo;
-    private $link;
-    private $autores;
+    private $idNormas;
+    private $dataLimite;
+    private $dataNotificacaoAutor;
+    private $dataVersaoFinal;
+    private $dataInicioEvento;
+    private $dataFinalEvento;
+    private $dataMostraTrabalho;
+    private $tempoApresentacaoResumo;
+    private $tempoApresentacaoArtigo;
     private $ano;
-    private $tipo;
 
 
-    public function getIdArtigo()
+
+
+    public function getIdNormas()
     {
-        return $this->idArtigo;
+        return $this->idNormas;
     }
 
-    public function setIdArtigo($idArtigo)
+    public function setIdNormas($idNormas)
     {
-        $this->idArtigo = $idArtigo;
+        $this->idNormas = $idNormas;
     }
-    public function getTitulo()
+    public function getDataLimite()
     {
-        return $this->titulo;
-    }
-
-    public function setTitulo($titulo)
-    {
-        $this->titulo = $titulo;
+        return $this->dataLimite;
     }
 
-    public function getLink()
+    public function setDataLimite($dataLimite)
     {
-        return $this->link;
+        $this->dataLimite = $dataLimite;
     }
 
-    public function setLink($link)
+    public function getDataNotificacaoAutor()
     {
-        $this->link = $link;
-    }
-    public function getAutores()
-    {
-        return $this->autores;
+        return $this->dataNotificacaoAutor;
     }
 
-    public function setAutores($autores)
+    public function setDataNotificacaoAutor($dataNotificacaoAutor)
     {
-        $this->autores = $autores;
+        $this->dataNotificacaoAutor = $dataNotificacaoAutor;
     }
+    public function getDataVersaoFinal()
+    {
+        return $this->dataVersaoFinal;
+    }
+
+    public function setDataVersaoFinal($dataVersaoFinal)
+    {
+        $this->dataVersaoFinal = $dataVersaoFinal;
+    }
+    public function getDataInicioEvento()
+    {
+        return $this->dataInicioEvento;
+    }
+
+    public function setDataInicioEvento($dataInicioEvento)
+    {
+        $this->dataInicioEvento = $dataInicioEvento;
+    }
+
+
+    public function getDataFinalEvento()
+    {
+        return $this->dataFinalEvento;
+    }
+
+    public function setDataFinalEvento($dataFinalEvento)
+    {
+        $this->dataFinalEvento = $dataFinalEvento;
+    }
+
+    public function getTempoApresentacaoResumo()
+    {
+        return $this->tempoApresentacaoResumo;
+    }
+
+    public function setTempoApresentacaoResumo($tempoApresentacaoResumo)
+    {
+        $this->dataFinalEvento = $tempoApresentacaoResumo;
+    }
+
+    public function getTempoApresentacaoArtigo()
+    {
+        return $this->tempoApresentacaoArtigo;
+    }
+
+    public function setTempoApresentacaoArtigo($tempoApresentacaoArtigo)
+    {
+        $this->dataFinalEvento = $tempoApresentacaoArtigo;
+    }
+
     public function getAno()
     {
         return $this->ano;
@@ -54,18 +101,17 @@ class Artigo
 
     public function setAno($ano)
     {
-        $this->ano = $ano;
+        $this->dataFinalEvento = $ano;
     }
 
-
-    public function getTipo()
+    public function getDataMostraTrabalho()
     {
-        return $this->tipo;
+        return $this->dataMostraTrabalho;
     }
 
-    public function setTipo($tipo)
+    public function setDataMostraTrabalho($dataMostraTrabalho)
     {
-        $this->tipo = $tipo;
+        $this->dataFinalEvento = $dataMostraTrabalho;
     }
 
 }
