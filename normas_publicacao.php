@@ -52,34 +52,31 @@ $normas = $controller->getNormasPublicacao('2023');
     <div class="container m-0 mt-5 p-0 pt-5">
       <div class="row">
         <div class="col">
-          <div class="col w-40 datas importantes custom-background h-max-content d-block d-inline-block d-flex p-10px text-white d-flex flex-column p-10">
-            <br>
+          <div class="col w-40 p-2 datas importantes custom-background h-max-content d-block d-inline-block d-flex p-10px text-white d-flex flex-column p-10">
+
             <h1 class=" fs-3 text-white font-weight-bold mt-1 mx-auto"><img src="./imagens/time-and-calendar.png" class="mx-2" alt="">Datas Importantes</h1>
             <hr class="mx-5">
-            <br>
-            <h4 class="mx-auto custom-font font-weight-bold">Data limite para a submissão de trabalhos:</h4>
-            <h4 class="mx-auto custom-font font-weight-light"><?= $normas->getDataLimite() ?></h4>
-            <br>
-            <br>
+
+            <h4 class="mx-auto custom-font font-weight-bold mt-5">Data limite para a submissão de trabalhos:</h4>
+            <h4 class="mx-auto custom-font font-weight-light mt-2 mb-5"><?= $normas->getDataLimite() ?></h4>
+
 
             <h4 class="mx-auto custom-font font-weight-bold">Notificação aos autores:</h4>
-            <h4 class="mx-auto custom-font font-weight-light"><?= $normas->getDataNotificacaoAutor() ?></h4>
-            <br>
-            <br>
+            <h4 class="mx-auto custom-font font-weight-light mt-2 mb-5"><?= $normas->getDataNotificacaoAutor() ?></h4>
+
+
 
             <h4 class="mx-auto custom-font font-weight-bold">Submissão da versão final:</h4>
-            <h4 class="mx-auto custom-font font-weight-light"><?= $normas->getDataVersaoFinal() ?></h4>
-            <br>
-            <br>
+            <h4 class="mx-auto custom-font font-weight-light mt-2 mb-5"><?= $normas->getDataVersaoFinal() ?></h4>
+
 
             <h4 class="mx-auto custom-font font-weight-bold">Evento:</h4>
-            <h4 class="mx-auto custom-font font-weight-light"><?= $normas->getDataInicioEvento() ?> à <?= $normas->getDataFinalEvento() ?></h4>
-            <br>
-            <br>
+            <h4 class="mx-auto custom-font font-weight-light mt-2 mb-5"><?= $normas->getDataInicioEvento() ?> à <?= $normas->getDataFinalEvento() ?></h4>
+
 
             <h4 class="mx-auto custom-font font-weight-bold">Data prevista da mostra de trabalhos:</h4>
-            <h4 class="mx-auto custom-font font-weight-light"><?= $normas->getDataMostraTrabalho() ?></h4>
-            <br>
+            <h4 class="mx-auto custom-font font-weight-light mt-2 mb-5"><?= $normas->getDataMostraTrabalho() ?></h4>
+
           </div>
         </div>
 
