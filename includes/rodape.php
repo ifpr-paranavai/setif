@@ -1,32 +1,26 @@
 <?php
-require_once 'admin/includes/init.php';
-include_once LIB_CONTROLLER . DS . 'IndexController.class.php';
+    require_once 'admin/includes/init.php';
+    include_once LIB_CONTROLLER . DS . 'IndexController.class.php';
 
-$controller = new IndexController();
-$dados = $controller->getDadosPaginaInstitucional(2023);
+    $controller = new IndexController();
+    $dados = $controller->getDadosPaginaInstitucional(2023);
 ?>
 
-
-
-<footer class="py-3 bg-success text-white">
-    <div class="d-flex flex-row my-4 justify-content-center">
-        <i class="bi bi-person-fill d-block" style="font-size: 200%;">Contatos</i>
+<footer class="py-0 m-0 mt-auto bg-success text-white text-center">
+    <div class="row">
+        <div class="col-12 fs-3">
+            <i class="bi bi-person-fill py-1 "></i>Contatos
+        </div>
     </div>
-    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-white">
-                <i class="bi bi-envelope-at-fill" style="font-size: 150%;"></i>
-                <?= $dados->getEmail() ?>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-white">
-                <i class="bi bi-telephone-fill ms-2" style="font-size: 150%;"></i>
-                <?= $dados->getTelefone() ?>
-            </a>
-        </li>
-    </ul>
-
-    <p class="text-center">© SETIF 2023 - Desenvolvido por Giovanna Bernadelli e Maria Eduarda F. Bruning
-    </p>
+    <div class="row border-bottom py-1 fs-6">
+        <div class="col-12 col-sm-6">
+            <i class="bi bi-envelope-at-fill"></i>
+            <?= $dados->getEmail() ?>
+        </div>
+        <div class="col-12 col-sm-6">
+            <i class="bi bi-telephone-fill"></i>
+            <?= $dados->getTelefone() ?>
+        </div>
+    </div>
+    <p class="small py-1 m-0">© SETIF 2023 - Desenvolvido por Giovanna Bernadelli e Maria Eduarda F. Bruning </p>
 </footer>
