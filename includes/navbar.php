@@ -1,13 +1,13 @@
 <?php
 $paginas = array(
     array("index.php", "Apresentação"),
-    array("normas_publicacao.php", "Normas de Publicação"),
+    array("normasPublicacao.php", "Normas de Publicação"),
     array("anais.php", "Anais do Evento"),
     array("corpoEditorial.php", "Corpo Editorial"),
     array("fotos.php", "Fotos")
 );
 $url = explode("/", $_SERVER['REQUEST_URI']);
-$paginaAtual = $url[array_key_last($url)];
+$paginaAtual = end($url);
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -29,7 +29,9 @@ $paginaAtual = $url[array_key_last($url)];
                         <a class="nav-link-personalizado nav-link <?php if ($pagina[0] == $paginaAtual)
                             echo "active";
                         else
-                            echo "text-white"; ?>" aria-current="page" href="<?= $pagina[0] ?>"><?= $pagina[1] ?></a>
+                            echo "text-white"; ?>" aria-current="page" href="<?= $pagina[0] ?>">
+                            <?= $pagina[1] ?>
+                        </a>
                     </li>
                     <?php
                 }

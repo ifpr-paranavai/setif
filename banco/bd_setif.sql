@@ -316,8 +316,54 @@ CREATE TABLE `tb_topico_de_interesse` (
 --
 
 INSERT INTO `tb_topico_de_interesse` (`id_topico_de_interesse`, `nome`, `link_imagem`) VALUES
-(1, 'Arquitetura de Computadores', './imagens/Eng.Computadores.png'),
-(2, 'Arquitetura de Computadores', './imagens/Eng.Computadores.png');
+(1, 'Arquitetura de Computadores\r\n', './imagens/topicos/EngenhariaDeComputadores.png'),
+(2, 'Automação e Robótica', './imagens/topicos/AutomacaoERobotica.png'),
+(3, 'Banco de Dados', './imagens/topicos/BancoDeDados.png'),
+(4, 'Engenharia de Software', './imagens/topicos/EngenhariaDeSoftware.png'),
+(5, 'Ferramentas Computacionais', './imagens/topicos/FerramentasComputacionais.png'),
+(6, 'Informática na Educação', './imagens/topicos/InfoEducacao.png'),
+(7, 'Inteligência Artificial', './imagens/topicos/IA.png'),
+(8, 'Interação Humano-Computador', './imagens/topicos/InteracaoHumanoPC.png'),
+(9, 'Redes e Sistemas Distribuídos', './imagens/topicos/RedesSistemasDistribuidos.png'),
+(10, 'Sistemas Operacionais', './imagens/topicos/SO.png'),
+(11, 'Sistemas de Informação', './imagens/topicos/SistemasInformacao.png'),
+(12, 'Arquitetura de Computadores\r\n', './imagens/topicos/EngenhariaDeComputadores.png'),
+(13, 'Automação e Robótica', './imagens/topicos/AutomacaoERobotica.png'),
+(14, 'Banco de Dados', './imagens/topicos/BancoDeDados.png'),
+(15, 'Engenharia de Software', './imagens/topicos/EngenhariaDeSoftware.png'),
+(16, 'Ferramentas Computacionais', './imagens/topicos/FerramentasComputacionais.png'),
+(17, 'Informática na Educação', './imagens/topicos/InfoEducacao.png'),
+(18, 'Inteligência Artificial', './imagens/topicos/IA.png'),
+(19, 'Interação Humano-Computador', './imagens/topicos/InteracaoHumanoPC.png'),
+(20, 'Redes e Sistemas Distribuídos', './imagens/topicos/RedesSistemasDistribuidos.png'),
+(21, 'Sistemas Operacionais', './imagens/topicos/SO.png'),
+(22, 'Sistemas de Informação', './imagens/topicos/SistemasInformacao.png');
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices de tabela `tb_topico_de_interesse`
+--
+ALTER TABLE `tb_topico_de_interesse`
+  ADD PRIMARY KEY (`id_topico_de_interesse`);
+
+--
+-- AUTO_INCREMENT para tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `tb_topico_de_interesse`
+--
+ALTER TABLE `tb_topico_de_interesse`
+  MODIFY `id_topico_de_interesse` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
 
 --
 -- Índices para tabelas despejadas

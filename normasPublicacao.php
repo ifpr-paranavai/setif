@@ -19,29 +19,9 @@ $normas = $controller->getNormasPublicacao('2023');
     <?php include_once 'includes/navbar.php' ?>
 
     <body>
-        <style>
-        .custom-height {
-            height: 45%;
-        }
-
-        .custom-font {
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        .custom-color {
-            color: #D9D9D9;
-        }
-
-        .link {
-            width: 150px;
-            height: 150px;
-            border: 2px solid #183276;
-            background-size: cover;
-        }
-        </style>
         <?php
-    include_once 'includes/navbar.php';
-    ?>
+        include_once 'includes/navbar.php';
+        ?>
 
         <div class="container-fluid mt-5 pt-5">
             <div class="row border-bottom">
@@ -177,24 +157,24 @@ $normas = $controller->getNormasPublicacao('2023');
                 </div>
                 <div class="row py-3">
                     <?php
-          $topicosDeInteresses = $controller->getTopicosDeInteresse();
-          foreach ($topicosDeInteresses as $topicoDeInteresse):
-            ?>
-                    <div class="col-12 col-sm-4 col-md-3 col-lg-2">
-                        <div class="card text-bg-dark rounded-4 card-topico" style="width: 100%">
-                            <img src="<?= $topicoDeInteresse->getLinkImagem() ?>" class="card-img rounded-4">
-                            <div class="card-img-overlay">
-                                <div class="h-100 row align-items-center">
-                                    <div class="col text-center fs-5">
-                                        <?= $topicoDeInteresse->getNome() ?>
+                    $topicosDeInteresses = $controller->getTopicosDeInteresse();
+                    foreach ($topicosDeInteresses as $topicoDeInteresse):
+                        ?>
+                        <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+                            <div class="card text-bg-dark rounded-4 card-topico mb-4" style="width: 100%">
+                                <img src="<?= $topicoDeInteresse->getLinkImagem() ?>" class="card-img rounded-4">
+                                <div class="card-img-overlay">
+                                    <div class="h-100 row align-items-center">
+                                        <div class="col text-center fs-5">
+                                            <?= $topicoDeInteresse->getNome() ?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <?php
-          endforeach;
-          ?>
+                        <?php
+                    endforeach;
+                    ?>
                 </div>
             </div>
         </div>
