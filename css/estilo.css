@@ -1,8 +1,6 @@
 /* NAVBAR */
 .gradiente-navbar {
     background-image: linear-gradient(to right, #2776A4, #464BA4, #AC32C8);
-
-
 }
 
 .logosetif {
@@ -27,10 +25,6 @@
     width: 20%;
 }
 
-.container-fluid {
-    position: fixed;
-}
-
 .parallax-sobre,
 .parallax-localizacao,
 .parallax-programacao {
@@ -49,7 +43,7 @@
 .parallax-localizacao {
     background-image: url("../imagens/ifpr2.jpg");
     min-height: 100%;
-    
+
 }
 
 .parallax-programacao {
@@ -68,20 +62,20 @@
     width: 100%;
     margin-top: 15px;
     height: 500px;
-  
+
 }
 
-.botao-anais{
+.botao-anais {
     background-color: #183276 !important;
-    color:white !important;
+    color: white !important;
 }
 
 .botao-anais:hover {
     background-color: #A6B9EB !important;
-    opacity: 0.9  !important;
-    
+    opacity: 0.9 !important;
 
-    
+
+
 }
 
 .custom-background {
@@ -91,6 +85,19 @@
 .custom-font {
     font-family: 'Open Sans', sans-serif;
 }
+
+.background-roxo {
+    background-color: #464BA4;
+}
+
+.background-verde {
+    background-color: #2EA75A
+}
+
+.card-topico {
+    border: 2px solid #183276 !important;
+}
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
 

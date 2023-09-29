@@ -1,12 +1,12 @@
 <?php
-    require_once 'admin/includes/init.php';
-    include_once LIB_CONTROLLER . DS . 'IndexController.class.php';
+require_once 'admin/includes/init.php';
+include_once LIB_CONTROLLER . DS . 'IndexController.class.php';
 
-    $controller = new IndexController();
-    $dados = $controller->getDadosPaginaInstitucional(2023);
+$controller = new IndexController();
+$dados = $controller->getDadosPaginaInstitucional(2023);
 ?>
 
-<footer class="py-0 m-0 mt-auto bg-success text-white text-center">
+<footer class="container-fluid bg-success text-white text-center">
     <div class="row">
         <div class="col-12 fs-3">
             <i class="bi bi-person-fill py-1 "></i>Contatos
