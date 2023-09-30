@@ -1,8 +1,7 @@
 <?php
-
-require_once 'admin/includes/init.php';
-include_once LIB_CONTROLLER . DS . 'MidiaController.class.php';
-$controller = new MidiaController();
+  require_once 'admin/includes/init.php';
+  include_once LIB_CONTROLLER . DS . 'MidiaController.class.php';
+  $controller = new MidiaController();
 ?>
 
 <!DOCTYPE html>
@@ -14,39 +13,61 @@ $controller = new MidiaController();
 </head>
 
 <body>
-
     <?php include_once 'includes/navbar.php' ?>
     <main class="container text-center principal">
 
         <?php
-    if (isset($_GET['ano'])):
-      $midias = $controller->getMidiaPorAno($_GET['ano']);
-      ?>
-        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+          if (isset($_GET['ano'])):
+            $ano = $_GET['ano'];
+            $midias = $controller->getMidiaPorAno($ano);
+        ?>
+
+        <div id="carouselExampleDark" class="carousel carousel-dark slide overflow-hidden" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <?php
-          foreach ($midias as $midia):
-            ?>
-
-
-                <button type="button" data-bs-target="#carouselExampleDark"
-                    data-bs-slide-to="<?= $midia->getIdMidia()?>"></button>
-
+                  for ($i = 0; $i < sizeof($midias); $i++):
+                    if($i == 0):
+                ?>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="<?= $i ?>" class="active"
+                    aria-current="true" aria-label="<?php $i ?>"></button>
                 <?php
-          endforeach;
-          ?>
-
+                    else:
+                ?>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="<?= $i ?>"
+                    aria-label="<?php $i ?>"></button>
+                <?php
+                    endif;
+                  endfor;
+                ?>
             </div>
             <div class="carousel-inner">
                 <?php
-          foreach ($midias as $midia):
-            ?>
-                <div class="carousel-item" data-bs-interval="10000">
-                    <img src="<?= $midia->getLink()?>" class="d-block w-100">
+                  $primeiro= true;
+                foreach ($midias as $midia):
+                  if($primeiro):
+              ?>
+                <div class="carousel-item active">
+                    <img src="./imagens/fotos/<?= $ano?>/<?= $midia->getLink()?>" class="d-block w-100"
+                        alt="Foto do evento <?= $midia->getIdMidia()?>">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p><?= $midia->getTitulo()?></p>
+                    </div>
                 </div>
                 <?php
-          endforeach;
-          ?>
+                $primeiro= false;  
+                else:
+              ?>
+                <div class="carousel-item">
+                    <img src="./imagens/fotos/<?= $ano?>/<?= $midia->getLink()?>" class="d-block  w-100"
+                        alt="Foto do evento <?= $midia->getIdMidia()?>">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p><?= $midia->getTitulo()?></p>
+                    </div>
+                </div>
+                <?php
+                  endif;
+                endforeach;
+              ?>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
                 data-bs-slide="prev">
@@ -58,8 +79,6 @@ $controller = new MidiaController();
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-        </div>
-
         </div>
         <?php
     else:
