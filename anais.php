@@ -19,28 +19,31 @@ $controller = new AnaisController();
     include_once 'includes/navbar.php';
     ?>
 
-    <div class="container text-center my-5 py-5 p-5">
+    <main class="container principal">
         <?php
         if (isset($_GET['ano'])):
             $artigos = $controller->getArtigosPorAno($_GET['ano']);
             ?>
-            <div class="row align-items-center">
-                <?php
+        <div class="row pt-3">
+            <?php
                 foreach ($artigos as $artigo):
                     ?>
-                    <div class="col-12 py-2">
-                        <a href="<?= $artigo->getLink() ?>" class="mx-4 fs-2 btn rounded-4 botao-anais w-100 ">
-                            <?= $artigo->getTitulo() ?> </a>
-                    </div>
-                    <?php
-                endforeach;
-                ?>
+            <div class="card artigo mb-3">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $artigo->getTitulo() ?></h5>
+                    <p class="card-text"><?= $artigo->getAutores() ?></p>
+                    <a href="<?= $artigo->getLink() ?>" target="_blank" class="btn btn-primary">Ver Artigo</a>
+                </div>
             </div>
             <?php
+                endforeach;
+                ?>
+        </div>
+        <?php
         else:
             ?>
-            <div class="row align-items-center">
-                <?php
+        <div class="row align-items-center">
+            <?php
                 $anos = $controller->getAnosDasEdicoesAnteriores();
                 $quantidadeEdicoes = sizeof($anos);
                 $porcentagem = 1 / $quantidadeEdicoes;
@@ -48,20 +51,20 @@ $controller = new AnaisController();
                 foreach ($anos as $ano):
 
                     ?>
-                    <div class="col-12 col-sm-6 col-md-3 py-2">
-                        <a href="anais.php?ano=<?= $ano ?>" style="opacity:<?= $opacidade ?>"
-                            class="mx-4 fs-2 btn rounded-4 botao-anais mx-10 w-45 h-45 text-center py-3 p-5">Anais
-                            <?= $ano ?> </a>
-                    </div>
-                    <?php
+            <div class="col-12 col-sm-6 col-md-3 py-2">
+                <a href="anais.php?ano=<?= $ano ?>" style="opacity:<?= $opacidade ?>"
+                    class="mx-4 fs-2 btn rounded-4 botao-anais mx-10 w-45 h-45 text-center py-3 p-5">Anais
+                    <?= $ano ?> </a>
+            </div>
+            <?php
                     $opacidade += $porcentagem;
                 endforeach;
                 ?>
-            </div>
-            <?php
+        </div>
+        <?php
         endif;
         ?>
-    </div>
+    </main>
 
     <?php include_once 'includes/rodape.php' ?>
     <?php include_once 'includes/scripts.php' ?>

@@ -1,10 +1,9 @@
-<?php
-
-require_once 'admin/includes/init.php';
-include_once LIB_CONTROLLER . DS . 'NormasPublicacaoController.class.php';
-include_once LIB_UTIL . DS . 'Funcoes.class.php';
-$controller = new NormasPublicacaoController();
-$normas = $controller->getNormasPublicacao('2023');
+<?php  
+    require_once 'admin/includes/init.php';
+    include_once LIB_CONTROLLER . DS . 'NormasPublicacaoController.class.php';
+    include_once LIB_UTIL . DS . 'Funcoes.class.php';
+    $controller = new NormasPublicacaoController();
+    $normas = $controller->getNormasPublicacao('2023');
 ?>
 
 <!DOCTYPE html>
@@ -18,12 +17,8 @@ $normas = $controller->getNormasPublicacao('2023');
 <body>
     <?php include_once 'includes/navbar.php' ?>
 
-    <body>
-        <?php
-        include_once 'includes/navbar.php';
-        ?>
-
-        <div class="container-fluid mt-5 pt-5">
+    <main class="principal px-0">
+        <div class="container-fluid">
             <div class="row border-bottom">
                 <div class="col-12 col-md-6 background-roxo text-center text-white">
 
@@ -160,26 +155,27 @@ $normas = $controller->getNormasPublicacao('2023');
                     $topicosDeInteresses = $controller->getTopicosDeInteresse();
                     foreach ($topicosDeInteresses as $topicoDeInteresse):
                         ?>
-                        <div class="col-12 col-sm-4 col-md-3 col-lg-2">
-                            <div class="card text-bg-dark rounded-4 card-topico mb-4" style="width: 100%">
-                                <img src="<?= $topicoDeInteresse->getLinkImagem() ?>" class="card-img rounded-4">
-                                <div class="card-img-overlay">
-                                    <div class="h-100 row align-items-center">
-                                        <div class="col text-center fs-5">
-                                            <?= $topicoDeInteresse->getNome() ?>
-                                        </div>
+                    <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+                        <div class="card text-bg-dark rounded-4 card-topico mb-4" style="width: 100%">
+                            <img src="<?= $topicoDeInteresse->getLinkImagem() ?>" class="card-img rounded-4 opacity-25">
+                            <div class="card-img-overlay">
+                                <div class="h-100 row align-items-center">
+                                    <div class="col text-center fs-5">
+                                        <?= $topicoDeInteresse->getNome() ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <?php
+                    </div>
+                    <?php
                     endforeach;
                     ?>
                 </div>
             </div>
         </div>
-        <?php include_once 'includes/rodape.php' ?>
-        <?php include_once 'includes/scripts.php' ?>
-    </body>
+    </main>
+    <?php include_once 'includes/rodape.php' ?>
+    <?php include_once 'includes/scripts.php' ?>
+</body>
 
 </html>

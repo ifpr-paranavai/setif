@@ -1,8 +1,14 @@
 <?php
-
-require_once 'admin/includes/init.php';
-include_once LIB_CONTROLLER . DS . 'CorpoEditorialController.class.php';
-$controller = new CorpoEditorialController();
+    require_once 'admin/includes/init.php';
+    include_once LIB_CONTROLLER . DS . 'CorpoEditorialController.class.php';
+    $controller = new CorpoEditorialController();
+    $membros = $controller->getCorpoEditorialPorAno(2023);
+    foreach ($membros as $membro) {
+        if($membro->getFuncao() == "Presidente"){
+            $presidente = $membro->getNome();
+            break;
+        }
+    }
 ?>
 
 
@@ -18,54 +24,53 @@ $controller = new CorpoEditorialController();
 <body>
     <?php include_once 'includes/navbar.php' ?>
 
-    <style>
-        .custom-background {
-            background-color: #464BA4;
-        }
+    <main class="container-fluid background-roxo text-center text-white principal">
+        <div class="row border-bottom">
+            <div class="col-12">
+                <h2 class="py-3">
+                    Presidente
+                </h2>
+                <p class="py-1 fs-4"><?= $presidente ?></p>
+            </div>
+        </div>
+        <div class="row border-bottom">
+            <div class="col-12">
+                <h2 class="py-3">
+                    Comitê Organizador da SETIF
+                </h2>
+                <?php
+                    foreach ($membros as $membro):
+                        if($membro->getFuncao() == "Organizador Docente"):
+                            $presidente = $membro->getNome();
+                ?>
+                <p class="py-1 fs-4"><?= $membro->getNome(); ?></p>
+                <?php
+                        endif;
+                    endforeach;
+                ?>
+            </div>
+        </div>
 
-        .custom-font {
-            font-family: 'Open Sans', sans-serif;
-        }
-    </style>
-
-    <div class="custom-background custom-font h-max-content d-block d-inline-block d-flex p-10px
-     text-white d-flex flex-column p-10 w-max-content px-5 py-5 text-center mb-3">
-
-        <div>
-            <?php
-
-            $nomes = $controller->getCorpoEditorialPorAno(2023);
-            foreach ($nomes as $nome):
-                if ($nome->getFuncao() == "Presidente") {
-
-                    ?>
-                    <h1 class="mx-auto font-weight-bolder">Presidente</h1>
-                    <br>
-                    <h2 class="mx-auto">
-                        <?= $nome->getNome() ?>
-                    </h2>
-                    <br>
-                    <br>
-                    <hr>
-                </div>
-            <?php }endforeach; ?>
-
-        <h1 class="mx-auto font-weight-bolder">Comitê Organizador da SETIF</h1> <br>
-        <h2 class="mx-auto">
-
-        </h2>
-        <br>
-        <hr>
-        <h4 class="mx-auto my-2">
-            Maria Eduarda Fiorenzano Bruning <br>
-            Giovanna Bernadelli Souza Goes
-        </h4>
-                </div>
-        <?php include_once 'includes/rodape.php' ?>
-
-
-        <?php include_once 'includes/scripts.php' ?>
-
+        <div class="row">
+            <div class="col-12">
+                <h2 class="py-3">
+                    Membros Discientes
+                </h2>
+                <?php
+                    foreach ($membros as $membro):
+                        if($membro->getFuncao() == "Organizador Discente"):
+                            $presidente = $membro->getNome();
+                ?>
+                <p class="py-1 fs-4"><?= $membro->getNome(); ?></p>
+                <?php
+                        endif;
+                    endforeach;
+                ?>
+            </div>
+        </div>
+    </main>
+    <?php include_once 'includes/rodape.php' ?>
+    <?php include_once 'includes/scripts.php' ?>
 </body>
 
 </html>

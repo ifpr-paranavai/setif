@@ -6,7 +6,7 @@ $controller = new IndexController();
 $dados = $controller->getDadosPaginaInstitucional(2023);
 ?>
 
-<footer class="container-fluid bg-success text-white text-center">
+<footer class="container-fluid bg-success text-white text-center rodape">
     <div class="row">
         <div class="col-12 fs-3">
             <i class="bi bi-person-fill py-1 "></i>Contatos
