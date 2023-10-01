@@ -7,7 +7,7 @@ class DaoArtigo
 	public function getAnosDasEdicoesAnteriores()
 	{
 		try {
-			$sql = "SELECT ano FROM tb_artigo GROUP BY ano";
+			$sql = "SELECT ano FROM tb_artigo GROUP BY ano ORDER BY ano DESC";
 			$sqlPreparada = Conexao::getInstancia()->prepare($sql);
 			$sqlPreparada->execute();
 			return $sqlPreparada->fetchAll(PDO::FETCH_COLUMN);

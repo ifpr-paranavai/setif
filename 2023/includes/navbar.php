@@ -4,7 +4,8 @@ $paginas = array(
     array("normasPublicacao.php", "Normas de Publicação"),
     array("../anais/", "Anais do Evento"),
     array("corpoEditorial.php", "Corpo Editorial"),
-    array("../fotos/", "Fotos")
+    array("../fotos/", "Fotos"),
+    array("../2022/", "SETIF 2022"),
 );
 $url = explode("/", $_SERVER['REQUEST_URI']);
 $paginaAtual = end($url);
@@ -25,7 +26,7 @@ $paginaAtual = end($url);
                 <?php
                 foreach ($paginas as $pagina) {
                     ?>
-                <li class="nav-item text-center">
+                <li class="nav-item col-6 col-sm-3 col-md-2 text-center">
                     <a class="nav-link-personalizado nav-link <?php if ($pagina[0] == $paginaAtual)
                             echo "active";
                         else

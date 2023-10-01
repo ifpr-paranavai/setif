@@ -5,6 +5,7 @@ class Midia
     private $link;
     private $titulo;
     private $ano;
+    private $tipo;
 
     public function getIdMidia()
     {
@@ -46,5 +47,14 @@ class Midia
         $this->ano = $ano;
     }
 
+    public function getTipo()
+    {
+        return $this->tipo;
+    }
+
+    public function setTipo($tipo)
+    {
+        $this->tipo = $tipo;
+    }
 }
 ?>

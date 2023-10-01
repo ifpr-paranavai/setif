@@ -47,7 +47,7 @@ $paginaAtual = end($url);
                     <?php
                 foreach ($paginas as $pagina) {
                     ?>
-                    <li class="nav-item text-center">
+                    <li class="nav-item col-6 col-sm-4 text-center">
                         <a class="nav-link-personalizado nav-link <?php if ($pagina[0] == $paginaAtual)
                             echo "active";
                         else
@@ -67,7 +67,7 @@ $paginaAtual = end($url);
         <?php
           if (isset($_GET['ano'])):
             $ano = $_GET['ano'];
-            $midias = $controller->getMidiaPorAno($ano);
+            $midias = $controller->getFotosPorAno($ano);
         ?>
 
         <div id="carouselExampleDark" class="carousel carousel-dark slide overflow-hidden" data-bs-ride="carousel">
@@ -95,8 +95,8 @@ $paginaAtual = end($url);
                   if($primeiro):
               ?>
                 <div class="carousel-item active">
-                    <img src="<?= $ano . DS . $midia->getLink()?>" class="d-block w-100 img-carousel"
-                        alt="Foto do evento <?= $midia->getIdMidia()?>">
+                    <img src="https://drive.google.com/uc?export=view&id=<?=$midia->getLink()?>"
+                        class="d-block w-100 img-carousel" alt="Foto do evento <?= $midia->getIdMidia()?>">
                     <div class="carousel-caption d-none d-md-block">
                         <p><?= $midia->getTitulo()?></p>
                     </div>
@@ -106,8 +106,8 @@ $paginaAtual = end($url);
                 else:
               ?>
                 <div class="carousel-item">
-                    <img src="<?= $ano . DS . $midia->getLink()?>" class="d-block  w-100 img-carousel"
-                        alt="Foto do evento <?= $midia->getIdMidia()?>">
+                    <img src="https://drive.google.com/uc?export=view&id=<?=$midia->getLink()?>"
+                        class="d-block  w-100 img-carousel" alt="Foto do evento <?= $midia->getIdMidia()?>">
                     <div class="carousel-caption d-none d-md-block">
                         <p><?= $midia->getTitulo()?></p>
                     </div>

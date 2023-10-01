@@ -48,7 +48,7 @@ $paginaAtual = end($url);
                     <?php
                 foreach ($paginas as $pagina) {
                     ?>
-                    <li class="nav-item text-center">
+                    <li class="nav-item col-6 col-sm-4 text-center">
                         <a class="nav-link-personalizado nav-link <?php if ($pagina[0] == $paginaAtual)
                             echo "active";
                         else

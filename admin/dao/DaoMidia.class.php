@@ -16,13 +16,32 @@ class DaoMidia
 			print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
 		}
 	}
-	public function getMidiaPorLink($ano)
+	public function getFotosPorAno($ano)
 	{
 		try {
-			$sql = "SELECT * FROM tb_midia WHERE ano=:ano";
+			$sql = "SELECT * FROM tb_midia WHERE tipo='foto' AND ano=:ano";
 
 			$sqlPreparada = Conexao::getInstancia()->prepare($sql);
 			$sqlPreparada->bindValue(":ano", $ano);
+			$sqlPreparada->execute();
+
+			$midiasBD = $sqlPreparada->fetchAll(PDO::FETCH_ASSOC);
+			$midias = array();
+			foreach ($midiasBD as $midia):
+				$midias[] = $this->populaMidia($midia);
+			endforeach;
+
+			return $midias;
+		} catch (Exception $e) {
+			print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
+		}
+	}
+	public function getFotos()
+	{
+		try {
+			$sql = "SELECT * FROM tb_midia WHERE tipo='foto'";
+
+			$sqlPreparada = Conexao::getInstancia()->prepare($sql);
 			$sqlPreparada->execute();
 
 			$midiasBD = $sqlPreparada->fetchAll(PDO::FETCH_ASSOC);
@@ -44,6 +63,7 @@ class DaoMidia
 		$midia->setLink($row['link']);
 		$midia->setTitulo($row['titulo']);
 		$midia->setAno($row['ano']);
+		$midia->setTipo($row['tipo']);
 	
 		return $midia;
 	}
