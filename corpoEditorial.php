@@ -4,7 +4,7 @@
     $controller = new CorpoEditorialController();
     $membros = $controller->getCorpoEditorialPorAno(2023);
     foreach ($membros as $membro) {
-        if($membro->getFuncao() == "Presidente"){
+        if($membro->getFuncao() == CorpoEditorial::FUNCAO_PRESIDENTE){
             $presidente = $membro->getNome();
             break;
         }
@@ -40,8 +40,7 @@
                 </h2>
                 <?php
                     foreach ($membros as $membro):
-                        if($membro->getFuncao() == "Organizador Docente"):
-                            $presidente = $membro->getNome();
+                        if($membro->getFuncao() == CorpoEditorial::FUNCAO_SERVIDOR):
                 ?>
                 <p class="py-1 fs-4"><?= $membro->getNome(); ?></p>
                 <?php
@@ -58,8 +57,7 @@
                 </h2>
                 <?php
                     foreach ($membros as $membro):
-                        if($membro->getFuncao() == "Organizador Discente"):
-                            $presidente = $membro->getNome();
+                        if($membro->getFuncao() == CorpoEditorial::FUNCAO_DISCENTE):
                 ?>
                 <p class="py-1 fs-4"><?= $membro->getNome(); ?></p>
                 <?php

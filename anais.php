@@ -20,13 +20,22 @@ $controller = new AnaisController();
     ?>
 
     <main class="container principal">
+
         <?php
         if (isset($_GET['ano'])):
             $artigos = $controller->getArtigosPorAno($_GET['ano']);
             ?>
+        <div class="row border-bottom text-center">
+            <div class="col-12">
+                <h2 class="py-3">
+                    Artigos Completos
+                </h2>
+            </div>
+        </div>
         <div class="row pt-3">
             <?php
                 foreach ($artigos as $artigo):
+                    if($artigo->getTipo() == Artigo::TIPO_ARTIGO):
                     ?>
             <div class="card artigo mb-3">
                 <div class="card-body">
@@ -36,6 +45,32 @@ $controller = new AnaisController();
                 </div>
             </div>
             <?php
+                    endif;
+                endforeach;
+                ?>
+        </div>
+
+        <div class="row border-bottom text-center">
+            <div class="col-12">
+                <h2 class="py-3">
+                    Resumos
+                </h2>
+            </div>
+        </div>
+        <div class="row pt-3">
+            <?php
+                foreach ($artigos as $artigo):
+                    if($artigo->getTipo() == Artigo::TIPO_RESUMO):
+                    ?>
+            <div class="card artigo mb-3">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $artigo->getTitulo() ?></h5>
+                    <p class="card-text"><?= $artigo->getAutores() ?></p>
+                    <a href="<?= $artigo->getLink() ?>" target="_blank" class="btn btn-primary">Ver Artigo</a>
+                </div>
+            </div>
+            <?php
+                    endif;
                 endforeach;
                 ?>
         </div>

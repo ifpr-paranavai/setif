@@ -1,6 +1,8 @@
 <?php
 class Artigo
 {
+    public const TIPO_RESUMO = 'Resumo';
+    public const TIPO_ARTIGO = 'Artigo';
 
     private $idArtigo;
     private $titulo;

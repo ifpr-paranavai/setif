@@ -1,6 +1,9 @@
 <?php
 class CorpoEditorial
 {
+    public const FUNCAO_PRESIDENTE = 'Presidente';
+    public const FUNCAO_SERVIDOR = 'Organizador Servidor';
+    public const FUNCAO_DISCENTE = 'Organizador Discente';
 
     private $idCorpoEditorial;
     private $nome;

@@ -12,7 +12,7 @@ $paginaAtual = end($url);
 
 <nav class="navbar navbar-expand-lg fixed-top gradiente-navbar p-0">
     <div class="container-fluid">
-        <a class="navbar-brand p-0" href="#">
+        <a class="navbar-brand p-0" href="index.php">
             <img src="./imagens/logoNav.png" alt="Logo" class="img-fluid" style="height: 100px;">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"

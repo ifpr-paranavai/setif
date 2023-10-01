@@ -14,7 +14,7 @@
 
 <body>
     <?php include_once 'includes/navbar.php' ?>
-    <main class="container text-center principal">
+    <main class="container text-center principal pt-3">
 
         <?php
           if (isset($_GET['ano'])):
@@ -47,7 +47,7 @@
                   if($primeiro):
               ?>
                 <div class="carousel-item active">
-                    <img src="./imagens/fotos/<?= $ano?>/<?= $midia->getLink()?>" class="d-block w-100"
+                    <img src="./imagens/fotos/<?= $ano?>/<?= $midia->getLink()?>" class="d-block w-100 img-carousel"
                         alt="Foto do evento <?= $midia->getIdMidia()?>">
                     <div class="carousel-caption d-none d-md-block">
                         <p><?= $midia->getTitulo()?></p>
@@ -58,7 +58,7 @@
                 else:
               ?>
                 <div class="carousel-item">
-                    <img src="./imagens/fotos/<?= $ano?>/<?= $midia->getLink()?>" class="d-block  w-100"
+                    <img src="./imagens/fotos/<?= $ano?>/<?= $midia->getLink()?>" class="d-block  w-100 img-carousel"
                         alt="Foto do evento <?= $midia->getIdMidia()?>">
                     <div class="carousel-caption d-none d-md-block">
                         <p><?= $midia->getTitulo()?></p>
