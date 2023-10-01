@@ -1,5 +1,5 @@
 <?php
-require_once 'admin/includes/init.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/setif/init.php';
 include_once LIB_CONTROLLER . DS . 'IndexController.class.php';
 
 $controller = new IndexController();

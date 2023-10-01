@@ -1,5 +1,5 @@
 <?php
-    require_once 'admin/includes/init.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/setif/init.php';
     include_once LIB_CONTROLLER . DS . 'CorpoEditorialController.class.php';
     $controller = new CorpoEditorialController();
     $membros = $controller->getCorpoEditorialPorAno(2023);
@@ -18,11 +18,11 @@
 
 <head>
     <title>Corpo Editorial</title>
-    <?php include_once 'includes/metadados.php' ?>
+    <?php include_once LIB_INCLUDES_2023 . DS . 'metadados.php' ?>
 </head>
 
 <body>
-    <?php include_once 'includes/navbar.php' ?>
+    <?php include_once LIB_INCLUDES_2023 . DS . 'navbar.php' ?>
 
     <main class="container-fluid background-roxo text-center text-white principal">
         <div class="row border-bottom">
@@ -67,8 +67,8 @@
             </div>
         </div>
     </main>
-    <?php include_once 'includes/rodape.php' ?>
-    <?php include_once 'includes/scripts.php' ?>
+    <?php include_once LIB_INCLUDES_2023 . DS . 'rodape.php' ?>
+    <?php include_once LIB_INCLUDES_2023 . DS . 'scripts.php' ?>
 </body>
 
 </html>

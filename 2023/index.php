@@ -1,5 +1,5 @@
 <?php
-require_once 'admin/includes/init.php';
+require_once '../init.php';
 include_once LIB_CONTROLLER . DS . 'IndexController.class.php';
 
 $controller = new IndexController();
@@ -11,12 +11,12 @@ $dados = $controller->getDadosPaginaInstitucional(2023);
 
 <head>
     <title>Apresentação</title>
-    <?php include_once 'includes/metadados.php' ?>
+    <?php include_once LIB_INCLUDES_2023 . DS . 'metadados.php' ?>
 </head>
 
 <body>
     <?php
-    include_once 'includes/navbar.php';
+    include_once LIB_INCLUDES_2023 . DS . 'navbar.php';
     ?>
     <main class="principal">
         <section class="parallax-sobre h-100">
@@ -63,8 +63,8 @@ $dados = $controller->getDadosPaginaInstitucional(2023);
             </div>
         </section>
     </main>
-    <?php include_once 'includes/rodape.php' ?>
-    <?php include_once 'includes/scripts.php' ?>
+    <?php include_once LIB_INCLUDES_2023 . DS . 'rodape.php' ?>
+    <?php include_once LIB_INCLUDES_2023 . DS . 'scripts.php' ?>
 </body>
 
 </html>
