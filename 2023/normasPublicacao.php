@@ -26,22 +26,24 @@
                         <i class="bi bi-calendar-check pl-1"></i> Datas Importantes
                     </h2>
 
-                    <h4 class="mt-5">Data limite para a submissão de trabalhos:</h4>
-                    <p class="fs-5 mt-4 text-lowercase">
+                    <h4 class="mt-5">Data limite para a submissão de trabalhos <span class="text-danger">(hard
+                            deadline)</span>:</h4>
+                    <div class="alert alert-danger text-lowercase" role="alert">
                         <?= Funcoes::getDataPorExtenso($normas->getDataLimite()) ?>
-                    </p>
+                    </div>
 
                     <h4 class="mt-5">Notificação aos autores:
                     </h4>
-                    <p class="fs-5 mt-4 text-lowercase">
+                    <div class="alert alert-danger text-lowercase" role="alert">
                         <?= Funcoes::getDataPorExtenso($normas->getDataNotificacaoAutor()) ?>
-                    </p>
+                    </div>
 
                     <h4 class="mt-5">Submissão da versão final:
                     </h4>
-                    <p class="fs-5 mt-4 text-lowercase">
+                    <div class="alert alert-danger text-lowercase" role="alert">
                         <?= Funcoes::getDataPorExtenso($normas->getDataVersaoFinal()) ?>
-                    </p>
+                    </div>
+
 
                     <h4 class="mt-5">Evento:
                     </h4>
