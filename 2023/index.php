@@ -1,9 +1,9 @@
 <?php
-require_once '../init.php';
-include_once LIB_CONTROLLER . DS . 'IndexController.class.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/setif/init.php';
+    include_once LIB_CONTROLLER . DS . 'IndexController.class.php';
 
-$controller = new IndexController();
-$dados = $controller->getDadosPaginaInstitucional(2023);
+    $controller = new IndexController();
+    $dados = $controller->getDadosPaginaInstitucional(2023);
 ?>
 
 <!DOCTYPE html>
