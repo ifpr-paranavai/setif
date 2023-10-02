@@ -1,9 +1,9 @@
-<?php  
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/setif/init.php';
-    include_once LIB_CONTROLLER . DS . 'NormasPublicacaoController.class.php';
-    include_once LIB_UTIL . DS . 'Funcoes.class.php';
-    $controller = new NormasPublicacaoController();
-    $normas = $controller->getNormasPublicacao('2023');
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/setif/init.php';
+include_once LIB_CONTROLLER . DS . 'NormasPublicacaoController.class.php';
+include_once LIB_UTIL . DS . 'Funcoes.class.php';
+$controller = new NormasPublicacaoController();
+$normas = $controller->getNormasPublicacao('2023');
 ?>
 
 <!DOCTYPE html>
@@ -26,33 +26,33 @@
                         <i class="bi bi-calendar-check pl-1"></i> Datas Importantes
                     </h2>
 
-                    <h4 class="mt-5">Data limite para a submissão de trabalhos <span class="text-danger">(hard
+                    <h4 class="mt-4">Data limite para a submissão de trabalhos <span class="text-danger">(hard
                             deadline)</span>:</h4>
                     <div class="alert alert-danger text-lowercase" role="alert">
                         <?= Funcoes::getDataPorExtenso($normas->getDataLimite()) ?>
                     </div>
 
-                    <h4 class="mt-5">Notificação aos autores:
+                    <h4 class="mt-4">Notificação aos autores:
                     </h4>
                     <div class="alert alert-danger text-lowercase" role="alert">
                         <?= Funcoes::getDataPorExtenso($normas->getDataNotificacaoAutor()) ?>
                     </div>
 
-                    <h4 class="mt-5">Submissão da versão final:
+                    <h4 class="mt-4">Submissão da versão final:
                     </h4>
                     <div class="alert alert-danger text-lowercase" role="alert">
                         <?= Funcoes::getDataPorExtenso($normas->getDataVersaoFinal()) ?>
                     </div>
 
 
-                    <h4 class="mt-5">Evento:
+                    <h4 class="mt-4">Evento:
                     </h4>
                     <p class="fs-5 mt-4 text-lowercase">
                         <?= Funcoes::getDataPorExtenso($normas->getDataInicioEvento()) ?> à
                         <?= Funcoes::getDataPorExtenso($normas->getDataFinalEvento()) ?>
                     </p>
 
-                    <h4 class="mt-5">Data prevista da mostra de trabalhos:
+                    <h4 class="mt-4">Data prevista da mostra de trabalhos:
                     </h4>
                     <p class="fs-5 mt-4 text-lowercase">
                         <?= Funcoes::getDataPorExtenso($normas->getDataMostraTrabalho()) ?>
@@ -83,18 +83,15 @@
                     <ul>
                         <li>Utilizar preferencialmente o LaTeX: <a
                                 href="https://www.overleaf.com/latex/templates/sbc-conferences-template/blbxwjwzdngr"
-                                target="_blank" class="rounded-pill btn bbtn-outline-success" role="button">Ver
+                                target="_blank" class="rounded-pill btn btn-outline-success" role="button">Ver
                                 template no Overleaf</a></li>
                         <li class="mt-2">Modelo SBC-Artigo formato .doc: <a
-                                href="https://drive.google.com/file/d/0B_jYjhszA34iSnE2SC1OV0dVNlU/view?usp=sharing"
+                                href="https://drive.google.com/file/d/1H_29Hg5N534qOTwKOwnVMRWEDHZgIFMv/view"
                                 class="rounded-pill btn btn-outline-success" role=" button">Baixar template
                                 .doc</a>
 
                         </li>
                     </ul>
-                    <p class="fs-5">Sistema de submissão: <a href="https://tecnoif.com.br/setif/openconf/openconf.php"
-                            target="_blank" class="rounded-pill btn btn-outline-success" role="button">Clique
-                            aqui</a></p>
 
                     <h2 class="py-2 border-top">
                         Resumos
@@ -108,7 +105,7 @@
                                 template no Overleaf</a></li>
                         <li class="text-danger">Não incluir abstract e o resumo no modelo latex</li>
                         <li class="mt-2">Modelo SBC-Artigo formato .doc: <a
-                                href="https://drive.google.com/file/d/0B_jYjhszA34iSnE2SC1OV0dVNlU/view?usp=sharing"
+                                href="https://drive.google.com/file/d/1H_29Hg5N534qOTwKOwnVMRWEDHZgIFMv/view"
                                 class="rounded-pill btn btn-outline-success" role=" button">Baixar template
                                 .doc</a>
                         </li>
@@ -157,19 +154,19 @@
                     $topicosDeInteresses = $controller->getTopicosDeInteresse();
                     foreach ($topicosDeInteresses as $topicoDeInteresse):
                         ?>
-                    <div class="col-12 col-sm-4 col-md-3 col-lg-2">
-                        <div class="card text-bg-dark rounded-4 card-topico mb-4" style="width: 100%">
-                            <img src="<?= $topicoDeInteresse->getLinkImagem() ?>" class="card-img rounded-4 opacity-25">
-                            <div class="card-img-overlay">
-                                <div class="h-100 row align-items-center">
-                                    <div class="col text-center fs-5">
-                                        <?= $topicoDeInteresse->getNome() ?>
+                        <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+                            <div class="card text-bg-dark rounded-4 card-topico mb-4" style="width: 100%">
+                                <img src="<?= $topicoDeInteresse->getLinkImagem() ?>" class="card-img rounded-4 opacity-25">
+                                <div class="card-img-overlay">
+                                    <div class="h-100 row align-items-center">
+                                        <div class="col text-center fs-5">
+                                            <?= $topicoDeInteresse->getNome() ?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <?php
+                        <?php
                     endforeach;
                     ?>
                 </div>
