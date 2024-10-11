@@ -127,7 +127,7 @@ $paginaAtual = end($url);
                 $anos = $controller->getAnosDasEdicoesAnteriores();
                 $quantidadeEdicoes = sizeof($anos);
                 $porcentagem = 1 / $quantidadeEdicoes;
-                $opacidade = $porcentagem;
+                $opacidade = 1;
                 foreach ($anos as $ano):
 
                     ?>
@@ -137,7 +137,7 @@ $paginaAtual = end($url);
                     <?= $ano ?> </a>
             </div>
             <?php
-                    $opacidade += $porcentagem;
+                    $opacidade -= $porcentagem;
                 endforeach;
                 ?>
         </div>
