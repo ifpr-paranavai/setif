@@ -19,4 +19,7 @@ define('LIB_INCLUDES_2023', SITE_ROOT . DS . '2023' . DS . 'includes');
 
 define('LIB_IMG_2024', SITE_ROOT . DS . '2024' . DS . 'imagens');
 define('LIB_INCLUDES_2024', SITE_ROOT . DS . '2024' . DS . 'includes');
+
+define('LIB_IMG_2025', SITE_ROOT . DS . '2025' . DS . 'assets');
+define('LIB_INCLUDES_2025', SITE_ROOT . DS . '2025' . DS . 'includes');
 ?>

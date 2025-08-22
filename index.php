@@ -1,4 +1,16 @@
 <?php
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/setif/init.php';
+?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <?php include_once LIB_INCLUDES_2024 . DS . 'assets' . DS . 'metadados.php' ?>
+</head>
+
+
+<?php
 /**
  * SETIF 2025 - Página principal
  * 
