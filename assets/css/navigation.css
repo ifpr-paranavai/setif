@@ -1,0 +1,71 @@
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para mobile */
+@media (max-width: 991.98px) {
+  .navbar {
+    backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.98) !important;
+  }
+
+  .navbar-collapse {
+    transition: all 0.3s ease-in-out !important;
+  }
+  .dropdown-menu {
+    background: rgba(0, 0, 0, 0.9);
+    margin: 10px 0;
+  }
+}
+
+/* Efeitos de hover para links */
+.nav-link {
+  position: relative;
+  color: var(--dark-color);
+  font-weight: 600;
+  margin: 0 15px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, var(--neon-blue), var(--neon-purple));
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.9) !important;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand img {
+  transition: all 0.3s ease;
+  height: 50px;
+  width: auto;
+}
+
+.dropdown-menu {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-item {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--neon-blue);
+}
