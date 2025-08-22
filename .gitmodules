@@ -1,9 +1,0 @@
-[submodule "2022"]
-	path = 2022
-	url = https://github.com/ifpr-paranavai/setif2022.git
-[submodule "2024"]
-	path = 2024
-	url = https://github.com/ifpr-paranavai/setif2024.git
-[submodule "2023"]
-	path = 2023
-	url = https://github.com/ifpr-paranavai/setif2023.git
