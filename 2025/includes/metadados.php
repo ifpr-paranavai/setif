@@ -32,22 +32,23 @@
 <meta name="twitter:description"
     content="Semana da Tecnologia da Informação do IFPR Paranavaí. Organizada pelos cursos de Engenharia de Software e Técnico em Informática. 5 a 7 de novembro de 2025." />
 
-<meta name="google-site-verification" content="f6hNrI-RqYYEuXHP4gJIicvG8jIZFIbjnUppyZoNt44">
+<meta name="google-site-verification" content="f6hNrI-RqYYEuXHP4gJIicvG8jIZFIbjnUppyZoNt44" />
 
 <!-- Bootstrap CSS -->
-<link href="2024/bibliotecas/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="2024/bibliotecas/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet" />
 
 <!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="2024/bibliotecas/bootstrap-icons-1.10.5/font/bootstrap-icons.css" />
 
 <!-- Fontes personalizadas -->
 <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
 
 <!-- Favicon -->
-<link rel="icon" href="2025/assets/images/logo.ico" type="image/x-icon">
+<link rel="icon" href="2025/assets/images/logo.ico" type="image/x-icon" />
 
 <!-- CSS Customizado -->
-<link rel="stylesheet" href="2025/assets/css/footer.css">
-<link rel="stylesheet" href="2025/assets/css/main.css">
+<link rel="stylesheet" href="2025/assets/css/footer.css" />
+<link rel="stylesheet" href="2025/assets/css/main.css" />
+<link rel="stylesheet" href="2025/assets/css/navigation.css" />

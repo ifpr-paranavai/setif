@@ -9,10 +9,6 @@
     <?php include_once LIB_INCLUDES_2025 . DS . 'metadados.php' ?>
 </head>
 
-
-
-
-
 <body>
 
     <?php
@@ -160,9 +156,6 @@
                         </div>
                         <p>Fique atento às nossas redes sociais e ao site oficial para não perder o prazo de inscrição.
                         </p>
-                        <button class="btn btn-custom btn-lg" disabled>
-                            <i class="bi bi-bell me-2"></i>Notificar-me quando abrir
-                        </button>
                     </div>
                 </div>
             </div>

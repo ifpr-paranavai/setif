@@ -20,7 +20,7 @@ if (in_array($currentPage, $dropdownPages)) {
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="../index.php">
+        <a class="navbar-brand" href="index.php">
             <img src="2025/assets/images/logo_if.png" alt="<?php echo $evento['titulo']; ?>">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -34,13 +34,13 @@ if (in_array($currentPage, $dropdownPages)) {
                     <a class="nav-link" href="#home">Início</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../index.php#about">Sobre</a>
+                    <a class="nav-link" href="#about">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../index.php#program">Programação</a>
+                    <a class="nav-link" href="#program">Programação</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../index.php#registration">Inscrições</a>
+                    <a class="nav-link" href="#registration">Inscrições</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -56,10 +56,13 @@ if (in_array($currentPage, $dropdownPages)) {
                                 Submissão</a></li>
                         <li><a class="dropdown-item" href="https://www.tecnoif.com.br/setif/anais/">Mostra de
                                 Trabalhos</a></li>
+                        <li>
+                            <a class="dropdown-item" href="https://tecnoif.com.br/setif/2024">SETIF 2024</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../index.php#contact">Contato</a>
+                    <a class="nav-link" href="#contact">Contato</a>
                 </li>
             </ul>
         </div>
