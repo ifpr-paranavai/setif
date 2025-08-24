@@ -54,8 +54,8 @@ if (in_array($currentPage, $dropdownPages)) {
                         <li><a class="dropdown-item"
                                 href="https://tecnoif.com.br/periodicos/index.php/setif/about/submissions">Normas de
                                 Submissão</a></li>
-                        <li><a class="dropdown-item" href="https://www.tecnoif.com.br/setif/anais/">Mostra de
-                                Trabalhos</a></li>
+                        <li><a class="dropdown-item" href="https://www.tecnoif.com.br/setif/anais/">Anais Anteriores</a>
+                        </li>
                         <li>
                             <a class="dropdown-item" href="https://tecnoif.com.br/setif/2024">SETIF 2024</a>
                         </li>
