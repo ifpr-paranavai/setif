@@ -22,4 +22,28 @@ define('LIB_INCLUDES_2024', SITE_ROOT . DS . '2024' . DS . 'includes');
 
 define('LIB_IMG_2025', SITE_ROOT . DS . '2025' . DS . 'assets');
 define('LIB_INCLUDES_2025', SITE_ROOT . DS . '2025' . DS . 'includes');
+
+/**
+ * SETIF 2025 - Configurações globais
+ * 
+ * Arquivo de configuração com variáveis globais do evento
+ * 
+ * @author IFPR Paranavaí - Pablo Henrique
+ * @version 1.0
+ */
+
+$evento = [
+    'titulo' => 'SETIF 2025',
+    'subtitulo' => 'Semana da Tecnologia da Informação do IFPR Campus Paranavaí (SETIF)',
+    'slogan' => 'Organizada pelos Cursos de Engenharia de Software e Técnico em Informática',
+    'data' => 'De 5 a 7 de novembro de 2025',
+    'local' => 'IFPR Campus Paranavaí',
+    'endereco' => 'Av. José Felipe Tequinha, 1400 - Jardim das Nações, Paranavaí - PR',
+    'contatos' => [
+        'eng-soft' => 'es.paranavai@ifpr.edu.br',
+        'ti-info' => 'ti.info.paranavai@ifpr.edu.br',
+        'telefone' => '(44) 3482-0110'
+    ]
+];
+
 ?>

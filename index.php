@@ -6,29 +6,18 @@
 <html lang="pt-BR">
 
 <head>
-    <?php include_once LIB_INCLUDES_2024 . DS . 'assets' . DS . 'metadados.php' ?>
+    <?php include_once LIB_INCLUDES_2025 . DS . 'metadados.php' ?>
 </head>
 
 
-<?php
-/**
- * SETIF 2025 - Página principal
- * 
- * Página inicial do evento SETIF 2025
- * 
- * @author IFPR Paranavaí - Pablo Henrique
- * @version 1.0
- */
 
-require_once 'includes/config.php';
-require_once 'includes/header.php';
-require_once 'includes/navigation.php';
-?>
 
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <body>
+
+    <?php
+        require_once LIB_INCLUDES_2025 . DS . 'navigation.php';
+    ?>
     <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div id="particles-js"></div>
@@ -39,8 +28,8 @@ require_once 'includes/navigation.php';
                         <h1 class="hero-title"><?php echo $evento['titulo']; ?></h1>
                         <p class="hero-subtitle"><?php echo $evento['subtitulo']; ?></p>
                         <p class="hero-description"><?php echo $evento['slogan']; ?></p>
-                        <a href="https://www.tecnoif.com.br/setif/2024/" class="btn btn-custom btn-lg">
-                            <i class="bi bi-calendar-check me-2"></i>Inscreva-se Gratuitamente
+                        <a href="https://www.even3.com.br/setif2025-614974/" class="btn btn-custom btn-lg">
+                            <i class="bi bi-calendar-check me-2"></i>Inscreva-se Gratuitamente no Even 3
                         </a>
 
                         <div class="countdown-box">
@@ -76,8 +65,8 @@ require_once 'includes/navigation.php';
                             <i class="bi bi-rocket-takeoff"></i>
                         </div>
                         <h4>Inovação</h4>
-                        <p>Apresentar as mais recentes tendências e tecnologias do mercado, preparando os participantes
-                            para os desafios do futuro.</p>
+                        <p>Apresentar os mais recentes trabalhos e projetos desenvolvidos no âmbito dos cursos de
+                            Engenharia de Software e Técnico de Informática do IFPR - Campus Paranavaíe e região.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -95,7 +84,7 @@ require_once 'includes/navigation.php';
     </section>
 
     <!-- Program Section -->
-    <section id="program" class="section-padding bg-light-custom">
+    <section id="program" class="hero-section section-padding bg-light-custom ">
         <div class="container">
             <h2 class="section-title fade-in-up">Programação</h2>
             <div class="row g-4">
@@ -202,13 +191,13 @@ require_once 'includes/navigation.php';
                         <div class="col-md-4">
                             <div class="contact-item justify-content-center fade-in-up">
                                 <i class="bi bi-envelope-fill"></i>
-                                <span><?php echo $evento['contatos']['email1']; ?></span>
+                                <span><?php echo $evento['contatos']['eng-soft']; ?></span>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="contact-item justify-content-center fade-in-up">
                                 <i class="bi bi-envelope-fill"></i>
-                                <span><?php echo $evento['contatos']['email2']; ?></span>
+                                <span><?php echo $evento['contatos']['ti-info']; ?></span>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -224,10 +213,16 @@ require_once 'includes/navigation.php';
     </section>
 
     <?php
-    require_once 'includes/footer.php';
+    require_once LIB_INCLUDES_2025 . DS . 'footer.php';
     ?>
 
+    <!-- Bootstrap JS -->
+    <script src="2024/bibliotecas/bootstrap-5.3.0/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Custom JS -->
+    <script src="2025/assets/js/main.js"></script>
+    <script src="2025/assets/js/effects/particles.js"></script>
+    <script src="2025/assets/js/navigation.js"></script>
 </body>
 
 </html>
