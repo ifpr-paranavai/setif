@@ -152,7 +152,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/setif/init.php';
                         <p class="mb-3">As inscrições para a SETIF 2025 serão totalmente gratuitas e abertas à
                             comunidade interna e externa do IFPR.</p>
                         <a href="https://www.even3.com.br/setif2025-614974/" class="mb-3 btn btn-custom btn-lg">
-                            <i class="bi bi-calendar-check me-2"></i>Inscreva-se Gratuitamente no Even 3
+                            <i class="bi bi-calendar-check me-2"></i>Inscreva-se Gratuitamente no Even3
                         </a>
                         <p>Fique atento às nossas redes sociais e ao site oficial para não perder o prazo de inscrição.
                         </p>
