@@ -1,5 +1,5 @@
 <?php
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/setif/init.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/setif/init.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@
 <body>
 
     <?php
-        require_once LIB_INCLUDES_2025 . DS . 'navigation.php';
+    require_once LIB_INCLUDES_2025 . DS . 'navigation.php';
     ?>
     <!-- Hero Section -->
     <section id="home" class="hero-section">
@@ -151,9 +151,9 @@
                         <h4>Gratuitas e Abertas</h4>
                         <p class="mb-3">As inscrições para a SETIF 2025 serão totalmente gratuitas e abertas à
                             comunidade interna e externa do IFPR.</p>
-                        <div class="alert alert-warning" role="alert">
-                            <strong>Abertura das inscrições: Em breve!</strong>
-                        </div>
+                        <a href="https://www.even3.com.br/setif2025-614974/" class="mb-3 btn btn-custom btn-lg">
+                            <i class="bi bi-calendar-check me-2"></i>Inscreva-se Gratuitamente no Even 3
+                        </a>
                         <p>Fique atento às nossas redes sociais e ao site oficial para não perder o prazo de inscrição.
                         </p>
                     </div>
