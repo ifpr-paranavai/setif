@@ -169,7 +169,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/setif/init.php';
             <div class="row justify-content-center">
                 <div class="col-lg-12 text-center">
                     <h3 class="mb-4 fade-in-up"><?php echo $evento['local']; ?></h3>
-                    <p class="lead mb-4 fade-in-up" style="color:#ffffff;"><?php echo $evento['endereco']; ?></p>
+                    <p class="lead mb-4 fade-in-up" style="color:#ffffff !important;"><?php echo $evento['endereco']; ?></p>
 
                     <!-- Mapa incorporado do Google Maps -->
                     <div class="map-container fade-in-up">
