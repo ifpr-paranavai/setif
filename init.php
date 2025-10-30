@@ -34,9 +34,9 @@ define('LIB_INCLUDES_2025', SITE_ROOT . DS . '2025' . DS . 'includes');
 
 $evento = [
     'titulo' => 'SETIF 2025',
-    'subtitulo' => 'Semana da Tecnologia da Informação do IFPR Campus Paranavaí (SETIF)',
+    'subtitulo' => 'Semana de Tecnologia da Informação do IFPR Campus Paranavaí (SETIF)',
     'slogan' => 'Organizada pelos Cursos de Engenharia de Software e Técnico em Informática',
-    'data' => 'De 5 a 7 de novembro de 2025',
+    'data' => 'De 3 a 7 de novembro de 2025',
     'local' => 'IFPR Campus Paranavaí',
     'endereco' => 'Av. José Felipe Tequinha, 1400 - Jardim das Nações, Paranavaí - PR',
     'contatos' => [
