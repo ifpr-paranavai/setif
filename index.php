@@ -30,9 +30,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/setif/init.php';
 
                         <div class="countdown-box">
                             <h3 class="countdown-title"><?php echo $evento['data']; ?></h3>
-                            <p class="mb-0" style="color:#ffff">Fique atento às nossas redes sociais para a divulgação
-                                da data oficial do
-                                evento.</p>
+                            <p class="mb-0" style="color:#ffff">Fique atento às nossas redes sociais @ifpr_pvai e @infoesw.ifpr.pvai</p>
                         </div>
                     </div>
                 </div>
@@ -128,10 +126,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/setif/init.php';
             <div class="row mt-5">
                 <div class="col-12 text-center">
                     <div class="alert alert-info fade-in-up" role="alert">
-                        <h5 class="alert-heading"><i class="bi bi-info-circle me-2"></i>Programação Completa em Breve!
-                        </h5>
-                        <p class="mb-0">Acompanhe nossas redes sociais para não perder nenhuma novidade sobre a
-                            programação detalhada do evento.</p>
+                        <div id="even3-widget-session">
+                            <iframe class="rounded-3"
+                                src="https://www.even3.com.br/widget/index?evento=setif2025-614974&amp;type=session&amp;lang=pt"
+                                id="even3_session" frameborder="0" allowfullscreen>
+                            </iframe>
+                        </div>
                     </div>
                 </div>
             </div>
