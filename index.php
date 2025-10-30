@@ -165,9 +165,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/setif/init.php';
     <!-- Contact Section -->
     <section id="contact" class="section-padding contact-section">
         <div class="container">
-            <h2 class="section-title text-white fade-in-up">Local do Evento</h2>
+            <h2 class="section-title text-white fade-in-up" style="color:#ffffff;">Local do Evento</h2>
             <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
+                <div class="col-lg-12 text-center">
                     <h3 class="mb-4 fade-in-up"><?php echo $evento['local']; ?></h3>
                     <p class="lead mb-4 fade-in-up" style="color:#ffffff;"><?php echo $evento['endereco']; ?></p>
 
