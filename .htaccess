@@ -2,3 +2,18 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php
+
+
+# Redireciona URLs antigas dos anais da SETIF para o novo portal OJS.
+# Abrange qualquer URL iniciada por /setif/ que contenha "anais".
+#
+# Exemplos:
+#   /setif/anais/
+#   /setif/2022/anaisEvento.php
+#   /setif/2019/anais/index.php
+#
+# Flags:
+#   R=301: redirecionamento permanente.
+#   L: interrompe o processamento das demais regras quando esta for aplicada.
+#   NC: ignora diferenças entre maiúsculas e minúsculas.
+RewriteRule ^.*anais.*$ https://tecnoif.com.br/periodicos/index.php/setif/pt_BR/ [R=301,L,NC]
