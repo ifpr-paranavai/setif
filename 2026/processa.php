@@ -1,10 +1,7 @@
 <?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/setif/init.php';
 session_start();
 
-// Link do formulário do Google Forms enviado
-$form_url = "https://docs.google.com/forms/d/e/1FAIpQLScYBIFxK5yzGD7g7Ahtm_ETHR0hiZlMk4MwjgUXFH0Lp2Qwtw/viewform";
-
-// Redireciona o usuário diretamente para o formulário
-header("Location: " . $form_url);
+// Redireciona o usuário direto para o formulário de inscrição (link definido em init.php)
+header("Location: " . $evento['links']['inscricao']);
 exit();
-?>

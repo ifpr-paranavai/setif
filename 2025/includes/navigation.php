@@ -20,8 +20,8 @@ if (in_array($currentPage, $dropdownPages)) {
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="index.php">
-            <img src="2025/assets/images/logo_if.png" alt="<?php echo $evento['titulo']; ?>">
+        <a class="navbar-brand" href="../index.php" title="Voltar para a edição atual da SETIF">
+            <img src="assets/images/logo_if.png" alt="<?php echo $evento['titulo']; ?>">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
