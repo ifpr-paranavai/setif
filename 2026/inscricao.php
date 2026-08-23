@@ -7,8 +7,8 @@ define('SITE_ROOT', ROOT . DS . 'setif');
 
 $evento = [
     'titulo' => 'SETIF 2026',
-    'subtitulo' => 'Semana de Tecnologia da Informação do IFPR Campus Paranavaí',
-    'slogan' => 'Organizada pelos Cursos de Engenharia de Software',
+    'slogan' => 'Semana de Tecnologia da Informação do IFPR Campus Paranavaí',
+    'subtitulo' => 'Organizada pelos Cursos de Engenharia de Software e Técnico em Informática',
     'data' => 'De 3 a 7 de novembro de 2026',
     'local' => 'IFPR Campus Paranavaí',
     'endereco' => 'Av. José Felipe Tequinha, 1400 - Jardim das Nações, Paranavaí - PR',
@@ -33,7 +33,7 @@ $evento = [
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php echo $evento['titulo']; ?> - <?php echo $evento['subtitulo']; ?></title>
+  <title><?php echo $evento['titulo']; ?> - <?php echo $evento['slogan']; ?></title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,12 +83,12 @@ $evento = [
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(10, 13, 18, 0.75);
+      background: rgba(10, 13, 18, 0.85);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border-color);
       z-index: 100;
-      padding: 1rem 6%;
+      padding: 0.8rem 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -97,20 +97,13 @@ $evento = [
     .logo-area {
       display: flex;
       align-items: center;
-      gap: 16px;
     }
 
-    .logo-img {
-      height: 40px;
+    .logo-ifpr-nav {
+      height: 48px;
       width: auto;
       object-fit: contain;
-      filter: drop-shadow(0 0 8px rgba(0,255,136,0.2));
-    }
-
-    .logo-divider {
-      width: 1px;
-      height: 26px;
-      background: var(--border-color);
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.15));
     }
 
     nav ul {
@@ -125,7 +118,6 @@ $evento = [
       font-size: 0.95rem;
       font-weight: 600;
       transition: all 0.3s ease;
-      position: relative;
     }
 
     nav a:hover {
@@ -140,7 +132,7 @@ $evento = [
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 140px 20px 80px;
+      padding: 130px 20px 80px;
     }
 
     .hero-card {
@@ -154,6 +146,9 @@ $evento = [
       box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .hero-card::before {
@@ -163,8 +158,21 @@ $evento = [
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle, rgba(0, 255, 136, 0.05) 0%, transparent 60%);
+      background: radial-gradient(circle, rgba(0, 255, 136, 0.08) 0%, transparent 60%);
       pointer-events: none;
+    }
+
+    .hero-logo-setif {
+      width: 170px;
+      height: auto;
+      margin-bottom: 1.5rem;
+      filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.4)) drop-shadow(0 0 35px rgba(0, 229, 255, 0.2));
+      animation: floatLogo 4s ease-in-out infinite;
+    }
+
+    @keyframes floatLogo {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
     }
 
     .hero h1 {
@@ -178,12 +186,31 @@ $evento = [
       letter-spacing: -1.5px;
     }
 
-    .hero .slogan-text {
+    /* ESTILO DA FRASE COM EFEITO DIGITAÇÃO E FONTE MAIOR */
+    .hero .slogan-container {
       color: var(--primary-cyan);
-      font-size: 1.05rem;
+      font-size: 1.35rem; /* Aumentado */
       font-weight: 600;
       margin-bottom: 1.2rem;
       letter-spacing: 0.5px;
+      min-height: 2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .typewriter-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.35rem;
+      background-color: var(--primary-green);
+      margin-left: 4px;
+      animation: blinkCursor 0.75s infinite;
+    }
+
+    @keyframes blinkCursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
     }
 
     .hero p {
@@ -450,6 +477,8 @@ $evento = [
       nav { display: none; }
       .hero h1 { font-size: 2.6rem; }
       .hero-card { padding: 2.2rem 1.5rem; }
+      .hero-logo-setif { width: 130px; }
+      .hero .slogan-container { font-size: 1.1rem; }
       .countdown-box { min-width: 65px; padding: 10px 12px; }
       .countdown-value { font-size: 1.4rem; }
     }
@@ -457,14 +486,12 @@ $evento = [
 </head>
 <body>
 
-  <!-- Novo Canvas Cyber/Cyberpunk Grid Interativo -->
+  <!-- Canvas de Fundo Cyber Grid Interativo -->
   <canvas id="cyber-canvas"></canvas>
 
   <header>
     <div class="logo-area">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Instituto_Federal_do_Paran%C3%A1_-_Marca_Vertical_2015.svg/1200px-Instituto_Federal_do_Paran%C3%A1_-_Marca_Vertical_2015.svg.png" alt="Logo IFPR" class="logo-img">
-      <div class="logo-divider"></div>
-      <img src="https://tecnoif.com.br/setif/2025/assets/img/logo.png" alt="Logo SETIF" class="logo-img" onerror="this.src='https://tecnoif.com.br/setif/2024/imagens/logo.png'">
+      <img src="logo-ifpr.png" alt="Instituto Federal Paraná - Campus Paranavaí" class="logo-ifpr-nav">
     </div>
     <nav>
       <ul>
@@ -480,8 +507,15 @@ $evento = [
   <main>
     <section id="inicio" class="hero">
       <div class="hero-card">
+        <img src="logo-setif.png" alt="Logo SETIF 2026" class="hero-logo-setif">
+
         <h1><?php echo $evento['titulo']; ?></h1>
-        <div class="slogan-text"><?php echo $evento['slogan']; ?></div>
+        
+        <!-- Elemento com Animação de Digitação -->
+        <div class="slogan-container">
+          <span id="typewriter"></span><span class="typewriter-cursor"></span>
+        </div>
+
         <p><?php echo $evento['subtitulo']; ?></p>
         
         <div class="date-badge">
@@ -572,9 +606,9 @@ $evento = [
       <h2 class="section-title">Inscrição</h2>
       <div class="card" style="max-width: 680px; margin: 0 auto; text-align: center;">
         <div class="card-icon" style="margin: 0 auto 1.5rem;"><i data-lucide="external-link"></i></div>
-        <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">Garante sua vaga na SETIF 2026</h3>
+        <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">Garanta sua vaga na SETIF 2026</h3>
         <p style="color: var(--text-muted); margin-bottom: 2rem; line-height: 1.6;">
-          As inscrições são gratuitas e abertas a toda a comunidade. Clique no botão abaixo para acessar o formulário oficial do Google Forms.
+          As inscrições são gratuitas e abertas a toda a comunidade. Clique no botão abaixo para acessar o formulário oficial.
         </p>
         <a href="processa.php" target="_blank" class="btn-primary" style="padding: 18px 36px; font-size: 1.1rem;">
           <i data-lucide="file-input"></i>
@@ -623,7 +657,22 @@ $evento = [
   <script>
     lucide.createIcons();
 
-    // 1. TIMER REGRESSIVO
+    // JS da Animação Typewriter
+    const textToType = "<?php echo $evento['slogan']; ?>";
+    const typewriterElement = document.getElementById('typewriter');
+    let index = 0;
+
+    function typeWriter() {
+      if (index < textToType.length) {
+        typewriterElement.textContent += textToType.charAt(index);
+        index++;
+        setTimeout(typeWriter, 50); // Ajuste este valor para mudar a velocidade
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', typeWriter);
+
+    // Contador regressivo
     const targetDate = new Date();
     targetDate.setDate(targetDate.getDate() + 30);
 
@@ -646,7 +695,7 @@ $evento = [
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // 2. NOVO FUNDO ANIMADO: GRADE CYBERPUNK 3D / ONDULAÇÃO DIGITAL
+    // Fundo interativo em Canvas
     const canvas = document.getElementById('cyber-canvas');
     const ctx = canvas.getContext('2d');
 
@@ -665,7 +714,6 @@ $evento = [
       mouse.targetY = e.clientY;
     });
 
-    // Partículas de feixe digital flutuantes
     const nodeCount = 50;
     const nodes = [];
 
@@ -685,13 +733,11 @@ $evento = [
     function render() {
       ctx.clearRect(0, 0, width, height);
 
-      // Suaviza movimento do mouse
       mouse.x += (mouse.targetX - mouse.x) * 0.05;
       mouse.y += (mouse.targetY - mouse.y) * 0.05;
 
       step += 0.015;
 
-      // Desenho da Grade Digital Animada
       const gridSize = 60;
       ctx.lineWidth = 1;
 
@@ -702,14 +748,12 @@ $evento = [
           let dist = Math.sqrt(dx * dx + dy * dy);
           let maxDist = 250;
 
-          // Efeito de onda conforme distorção do cursor
           let offset = Math.sin(step + (x + y) * 0.005) * 4;
           if (dist < maxDist) {
             let factor = (1 - dist / maxDist) * 15;
             offset -= factor;
           }
 
-          // Pontos de interseção neon da grade
           ctx.beginPath();
           ctx.arc(x, y + offset, 1.2, 0, Math.PI * 2);
           let pointAlpha = dist < maxDist ? (1 - dist / maxDist) * 0.8 + 0.1 : 0.12;
@@ -718,7 +762,6 @@ $evento = [
         }
       }
 
-      // Desenhar feixes e partículas flutuantes para cima
       nodes.forEach(node => {
         node.y += node.speedY;
         node.x += node.speedX;
@@ -734,7 +777,7 @@ $evento = [
         ctx.shadowBlur = 8;
         ctx.shadowColor = '#00e5ff';
         ctx.fill();
-        ctx.shadowBlur = 0; // reseta a sombra
+        ctx.shadowBlur = 0;
       });
 
       requestAnimationFrame(render);
