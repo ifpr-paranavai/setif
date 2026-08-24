@@ -48,14 +48,15 @@ $evento = [
         'telefone' => '(44) 3482-0110'
     ],
     'links' => [
-        'atual' => 'https://tecnoif.com.br/setif/',
-        'anais' => 'https://tecnoif.com.br/setif/anais/',
-        'ed_2025' => 'https://tecnoif.com.br/setif/2025/',
-        'ed_2024' => 'https://tecnoif.com.br/setif/2024/',
-        'ed_2023' => 'https://tecnoif.com.br/setif/2023/',
-        'ed_2022' => 'https://tecnoif.com.br/setif/2022/',
-        'equipe_editorial' => 'https://tecnoif.com.br/periodicos/index.php/setif/about/editorialTeam',
-        'submissoes' => 'https://tecnoif.com.br/periodicos/index.php/setif/about/submissions',
+        'atual' => '/setif/',
+        'anais' => '/periodicos/index.php/setif',
+        'ed_2025' => '/setif/2025/',
+        'ed_2024' => '/setif/2024/',
+        'ed_2023' => '/setif/2023/',
+        'ed_2022' => '/setif/2022/',
+        'equipe_editorial' => '/periodicos/index.php/setif/about/editorialTeam',
+        'submissoes' => '/periodicos/index.php/setif/about/submissions',
+
         'inscricao' => 'https://docs.google.com/forms/d/e/1FAIpQLScYBIFxK5yzGD7g7Ahtm_ETHR0hiZlMk4MwjgUXFH0Lp2Qwtw/viewform'
     ],
     // Identificador do evento na Even3
