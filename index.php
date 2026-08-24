@@ -6,216 +6,208 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/setif/init.php';
 <html lang="pt-BR">
 
 <head>
-    <?php include_once LIB_INCLUDES_2025 . DS . 'metadados.php' ?>
+    <?php include_once LIB_INCLUDES_2026 . DS . 'metadados.php' ?>
 </head>
 
 <body>
 
-    <?php
-    require_once LIB_INCLUDES_2025 . DS . 'navigation.php';
-    ?>
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div id="particles-js"></div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="hero-content">
-                        <h1 class="hero-title"><?php echo $evento['titulo']; ?></h1>
-                        <p class="hero-subtitle"><?php echo $evento['subtitulo']; ?></p>
-                        <p class="hero-description"><?php echo $evento['slogan']; ?></p>
-                        <a href="https://www.even3.com.br/setif2025-614974/" class="btn btn-custom btn-lg">
-                            <i class="bi bi-calendar-check me-2"></i>Inscreva-se Gratuitamente no Even 3
-                        </a>
+    <canvas id="cyber-canvas"></canvas>
 
-                        <div class="countdown-box">
-                            <h3 class="countdown-title"><?php echo $evento['data']; ?></h3>
-                            <p class="mb-0" style="color:#ffff">Fique atento às nossas redes sociais @ifpr_pvai e @infoesw.ifpr.pvai</p>
-                        </div>
+    <?php require_once LIB_INCLUDES_2026 . DS . 'navigation.php'; ?>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-card">
+                <h1><?php echo $evento['titulo']; ?></h1>
+
+                <img src="2026/assets/images/logo-setif.png" alt="Logo SETIF 2026" class="hero-logo-setif">
+
+                <div class="slogan-text"><?php echo $evento['slogan']; ?></div>
+                <p><?php echo $evento['subtitulo']; ?></p>
+
+                <div class="date-badge">
+                    <i data-lucide="calendar"></i>
+                    <?php echo $evento['data']; ?>
+                </div>
+
+                <div class="countdown-container">
+                    <div class="countdown-box">
+                        <span class="countdown-value" id="days">00</span>
+                        <span class="countdown-label">Dias</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="countdown-value" id="hours">00</span>
+                        <span class="countdown-label">Horas</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="countdown-value" id="minutes">00</span>
+                        <span class="countdown-label">Min</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="countdown-value" id="seconds">00</span>
+                        <span class="countdown-label">Seg</span>
                     </div>
                 </div>
+
+                <div class="btn-group">
+                    <a href="#inscricoes" class="btn-primary">
+                        <i data-lucide="ticket"></i>
+                        Inscreva-se Gratuitamente
+                    </a>
+                    <a href="<?php echo $evento['links']['anais']; ?>" target="_blank" class="btn-secondary">
+                        <i data-lucide="file-text"></i>
+                        Acessar Anais
+                    </a>
+                </div>
             </div>
+        </section>
+
+        <div class="section-wrapper">
+            <section id="sobre" class="section-container">
+                <h2 class="section-title">Sobre o Evento</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <div class="card-icon"><i data-lucide="target"></i></div>
+                        <h3>Missão</h3>
+                        <p>Promover o conhecimento e a troca de experiências na área de Tecnologia da Informação, conectando estudantes, profissionais e pesquisadores.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i data-lucide="lightbulb"></i></div>
+                        <h3>Inovação</h3>
+                        <p>Apresentar os mais recentes trabalhos e projetos desenvolvidos no âmbito dos cursos de Engenharia de Software e Técnico de Informática do IFPR - Campus Paranavaí e região.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i data-lucide="users"></i></div>
+                        <h3>Networking</h3>
+                        <p>Criar oportunidades de conexão entre a comunidade acadêmica e o mercado de trabalho, fortalecendo parcerias e colaborações do setor tecnológico.</p>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="section-padding">
-        <div class="container">
-            <h2 class="section-title fade-in-up">Sobre o Evento</h2>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card fade-in-up">
-                        <div class="feature-icon">
-                            <i class="bi bi-bullseye"></i>
-                        </div>
-                        <h4>Missão</h4>
-                        <p>Promover o conhecimento e a troca de experiências na área de Tecnologia da Informação,
-                            conectando estudantes, profissionais e pesquisadores.</p>
+        <div class="section-wrapper">
+            <section id="programacao" class="section-container">
+                <h2 class="section-title">Programação</h2>
+                <div class="grid-4">
+                    <div class="card">
+                        <div class="card-icon"><i data-lucide="laptop"></i></div>
+                        <h3>Minicursos</h3>
+                        <p>Aprofunde seus conhecimentos em temas específicos da TI.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i data-lucide="presentation"></i></div>
+                        <h3>Palestras</h3>
+                        <p>Conecte-se com especialistas renomados e fique por dentro das novidades do mercado.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i data-lucide="trophy"></i></div>
+                        <h3>Competições</h3>
+                        <p>Teste suas habilidades em desafios de programação e outras competições técnicas.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i data-lucide="layers"></i></div>
+                        <h3>Mostra de Trabalhos</h3>
+                        <p>Apresente seus projetos e pesquisas para a comunidade acadêmica e profissional.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card fade-in-up">
-                        <div class="feature-icon">
-                            <i class="bi bi-rocket-takeoff"></i>
-                        </div>
-                        <h4>Inovação</h4>
-                        <p>Apresentar os mais recentes trabalhos e projetos desenvolvidos no âmbito dos cursos de
-                            Engenharia de Software e Técnico de Informática do IFPR - Campus Paranavaíe e região.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card fade-in-up">
-                        <div class="feature-icon">
-                            <i class="bi bi-people"></i>
-                        </div>
-                        <h4>Networking</h4>
-                        <p>Criar oportunidades de conexão entre a comunidade acadêmica e o mercado de trabalho,
-                            fortalecendo parcerias e colaborações.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Program Section -->
-    <section id="program" class="hero-section section-padding bg-light-custom ">
-        <div class="container">
-            <h2 class="section-title fade-in-up">Programação</h2>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card fade-in-up">
-                        <div class="feature-icon">
-                            <i class="bi bi-book"></i>
-                        </div>
-                        <h4>Minicursos</h4>
-                        <p>Aprofunde seus conhecimentos em temas específicos da TI com instrutores especializados. Vagas
-                            limitadas!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card fade-in-up">
-                        <div class="feature-icon">
-                            <i class="bi bi-mic"></i>
-                        </div>
-                        <h4>Palestras</h4>
-                        <p>Conecte-se com especialistas renomados e fique por dentro das novidades e tendências do
-                            mercado de tecnologia.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card fade-in-up">
-                        <div class="feature-icon">
-                            <i class="bi bi-trophy"></i>
-                        </div>
-                        <h4>Competições</h4>
-                        <p>Teste suas habilidades em desafios de programação, hackathons e outras competições técnicas.
-                            Prêmios incríveis!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card fade-in-up">
-                        <div class="feature-icon">
-                            <i class="bi bi-graph-up"></i>
-                        </div>
-                        <h4>Mostra de Trabalhos</h4>
-                        <p>Apresente seus projetos e pesquisas para a comunidade acadêmica e profissional. Oportunidade
-                            única de visibilidade!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-12 text-center">
-                    <div class="alert alert-info fade-in-up" role="alert">
-                        <div id="even3-widget-session">
-                            <iframe class="rounded-3"
-                                src="https://www.even3.com.br/widget/index?evento=setif2025-614974&amp;type=session&amp;lang=pt"
-                                id="even3_session" frameborder="0" allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Registration Section -->
-    <section id="registration" class="section-padding">
-        <div class="container">
-            <h2 class="section-title fade-in-up">Inscrições</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="feature-card text-center fade-in-up">
-                        <div class="feature-icon mx-auto">
-                            <i class="bi bi-ticket-perforated"></i>
-                        </div>
-                        <h4>Gratuitas e Abertas</h4>
-                        <p class="mb-3">As inscrições para a SETIF 2025 serão totalmente gratuitas e abertas à
-                            comunidade interna e externa do IFPR.</p>
-                        <a href="https://www.even3.com.br/setif2025-614974/" class="mb-3 btn btn-custom btn-lg">
-                            <i class="bi bi-calendar-check me-2"></i>Inscreva-se Gratuitamente no Even3
-                        </a>
-                        <p>Fique atento às nossas redes sociais e ao site oficial para não perder o prazo de inscrição.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding contact-section">
-        <div class="container">
-            <h2 class="section-title text-white fade-in-up" style="color:#ffffff !important;">Local do Evento</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-12 text-center">
-                    <h3 class="mb-4 fade-in-up"><?php echo $evento['local']; ?></h3>
-                    <p class="lead mb-4 fade-in-up" style="color:#ffffff !important;"><?php echo $evento['endereco']; ?></p>
-
-                    <!-- Mapa incorporado do Google Maps -->
-                    <div class="map-container fade-in-up">
+                <?php if (!empty($evento['even3_slug'])): ?>
+                    <div class="even3-frame">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.1691111640016!2d-52.45690082490713!3d-23.054260879151514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x949296a233a74981%3A0x8aed8519780a4c71!2sIFPR%20-%20Instituto%20Federal%20do%20Paran%C3%A1%20-%20Campus%20Paranava%C3%AD!5e0!3m2!1spt-BR!2sbr!4v1755525838778!5m2!1spt-BR!2sbr"
-                            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                            class="rounded shadow" title="Localização do IFPR Campus Paranavaí">
+                            src="https://www.even3.com.br/widget/index?evento=<?php echo urlencode($evento['even3_slug']); ?>&type=session&lang=pt"
+                            id="even3_session"
+                            title="Programação da <?php echo $evento['titulo']; ?> (Even3)"
+                            frameborder="0"
+                            allowfullscreen>
                         </iframe>
                     </div>
-
-                    <div class="row g-4 mt-4">
-                        <div class="col-md-4">
-                            <div class="contact-item justify-content-center fade-in-up">
-                                <i class="bi bi-envelope-fill"></i>
-                                <span><?php echo $evento['contatos']['eng-soft']; ?></span>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="contact-item justify-content-center fade-in-up">
-                                <i class="bi bi-envelope-fill"></i>
-                                <span><?php echo $evento['contatos']['ti-info']; ?></span>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="contact-item justify-content-center fade-in-up">
-                                <i class="bi bi-telephone-fill"></i>
-                                <span><?php echo $evento['contatos']['telefone']; ?></span>
-                            </div>
-                        </div>
+                <?php else: ?>
+                    <div class="even3-placeholder">
+                        <div class="card-icon" style="margin: 0 auto 1.2rem;"><i data-lucide="clock"></i></div>
+                        <h3>Grade de horários em breve</h3>
+                        <p>A programação detalhada, com dias e horários de cada atividade, será publicada aqui assim que o evento for cadastrado na Even3.</p>
                     </div>
-                </div>
-            </div>
+                <?php endif; ?>
+            </section>
         </div>
-    </section>
 
-    <?php
-    require_once LIB_INCLUDES_2025 . DS . 'footer.php';
-    ?>
+        <div class="section-wrapper">
+            <section id="inscricoes" class="section-container">
+                <h2 class="section-title">Inscrição</h2>
+                <div class="card" style="max-width: 680px; margin: 0 auto; text-align: center;">
+                    <div class="card-icon" style="margin: 0 auto 1.5rem;"><i data-lucide="external-link"></i></div>
+                    <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">Garanta sua vaga na SETIF 2026</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem; line-height: 1.6;">
+                        As inscrições são gratuitas e abertas a toda a comunidade. Clique no botão abaixo para acessar o formulário oficial de inscrição.
+                    </p>
+                    <a href="2026/processa.php" target="_blank" class="btn-primary" style="padding: 18px 36px; font-size: 1.1rem;">
+                        <i data-lucide="file-input"></i>
+                        Fazer Inscrição Agora
+                    </a>
+                </div>
+            </section>
+        </div>
 
-    <!-- Bootstrap JS -->
+        <div class="section-wrapper">
+            <section id="local" class="section-container">
+                <h2 class="section-title">Local do Evento</h2>
+                <div class="location-card">
+                    <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; color: #ffffff;"><?php echo $evento['local']; ?></h3>
+                    <p style="color: var(--text-muted); margin-top: 5px;"><?php echo $evento['endereco']; ?></p>
+
+                    <iframe
+                        class="map-frame"
+                        src="https://maps.google.com/maps?q=Instituto+Federal+do+Paran%C3%A1+-+Campus+Paranava%C3%AD,+Av.+Jos%C3%A9+Felipe+Tequinha,+1400+-+Jardim+das+Na%C3%A7%C3%B5es,+Paranava%C3%AD+-+PR&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+
+                    <div class="contact-cards-grid">
+                        <a href="mailto:<?php echo $evento['contatos']['eng-soft']; ?>" class="contact-card">
+                            <div class="icon-spin-wrapper">
+                                <div class="icon-spin-circle">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                            </div>
+                            <span class="contact-card-label">ENGENHARIA DE SOFTWARE</span>
+                            <span class="contact-card-value"><?php echo $evento['contatos']['eng-soft']; ?></span>
+                        </a>
+
+                        <a href="mailto:<?php echo $evento['contatos']['ti-info']; ?>" class="contact-card">
+                            <div class="icon-spin-wrapper">
+                                <div class="icon-spin-circle">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                            </div>
+                            <span class="contact-card-label">TÉCNICO EM INFORMÁTICA</span>
+                            <span class="contact-card-value"><?php echo $evento['contatos']['ti-info']; ?></span>
+                        </a>
+
+                        <a href="tel:<?php echo preg_replace('/[^0-9]/', '', $evento['contatos']['telefone']); ?>" class="contact-card">
+                            <div class="icon-spin-wrapper">
+                                <div class="icon-spin-circle">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                            </div>
+                            <span class="contact-card-label">TELEFONE</span>
+                            <span class="contact-card-value"><?php echo $evento['contatos']['telefone']; ?></span>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <?php require_once LIB_INCLUDES_2026 . DS . 'footer.php'; ?>
+
+    <!-- Bootstrap JS (collapse do menu mobile) -->
     <script src="2024/bibliotecas/bootstrap-5.3.0/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom JS -->
-    <script src="2025/assets/js/main.js"></script>
-    <script src="2025/assets/js/effects/particles.js"></script>
-    <script src="2025/assets/js/navigation.js"></script>
+    <!-- JS da SETIF 2026 -->
+    <script src="2026/assets/js/effects/canvas.js"></script>
+    <script src="2026/assets/js/navigation.js"></script>
+    <script src="2026/assets/js/main.js"></script>
 </body>
 
 </html>

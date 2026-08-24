@@ -23,27 +23,43 @@ define('LIB_INCLUDES_2024', SITE_ROOT . DS . '2024' . DS . 'includes');
 define('LIB_IMG_2025', SITE_ROOT . DS . '2025' . DS . 'assets');
 define('LIB_INCLUDES_2025', SITE_ROOT . DS . '2025' . DS . 'includes');
 
+define('LIB_IMG_2026', SITE_ROOT . DS . '2026' . DS . 'assets');
+define('LIB_INCLUDES_2026', SITE_ROOT . DS . '2026' . DS . 'includes');
+
 /**
- * SETIF 2025 - Configurações globais
- * 
+ * SETIF 2026 - Configurações globais
+ *
  * Arquivo de configuração com variáveis globais do evento
  * 
- * @author IFPR Paranavaí - Pablo Henrique
- * @version 1.0
+ * @author IFPR Paranavaí - Leandro Menoni
+ * @version 1.1
  */
 
 $evento = [
-    'titulo' => 'SETIF 2025',
+    'titulo' => 'SETIF 2026',
     'subtitulo' => 'Semana de Tecnologia da Informação do IFPR Campus Paranavaí (SETIF)',
     'slogan' => 'Organizada pelos Cursos de Engenharia de Software e Técnico em Informática',
-    'data' => 'De 3 a 7 de novembro de 2025',
+    'data' => 'De 4 a 6 de novembro de 2026',
     'local' => 'IFPR Campus Paranavaí',
     'endereco' => 'Av. José Felipe Tequinha, 1400 - Jardim das Nações, Paranavaí - PR',
     'contatos' => [
         'eng-soft' => 'es.paranavai@ifpr.edu.br',
         'ti-info' => 'ti.info.paranavai@ifpr.edu.br',
         'telefone' => '(44) 3482-0110'
-    ]
+    ],
+    'links' => [
+        'atual' => 'https://tecnoif.com.br/setif/',
+        'anais' => 'https://tecnoif.com.br/setif/anais/',
+        'ed_2025' => 'https://tecnoif.com.br/setif/2025/',
+        'ed_2024' => 'https://tecnoif.com.br/setif/2024/',
+        'ed_2023' => 'https://tecnoif.com.br/setif/2023/',
+        'ed_2022' => 'https://tecnoif.com.br/setif/2022/',
+        'equipe_editorial' => 'https://tecnoif.com.br/periodicos/index.php/setif/about/editorialTeam',
+        'submissoes' => 'https://tecnoif.com.br/periodicos/index.php/setif/about/submissions',
+        'inscricao' => 'https://docs.google.com/forms/d/e/1FAIpQLScYBIFxK5yzGD7g7Ahtm_ETHR0hiZlMk4MwjgUXFH0Lp2Qwtw/viewform'
+    ],
+    // Identificador do evento na Even3
+    'even3_slug' => ''
 ];
 
 ?>
