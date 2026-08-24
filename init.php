@@ -49,7 +49,7 @@ $evento = [
     ],
     'links' => [
         'atual' => 'https://tecnoif.com.br/setif/',
-        'anais' => 'https://tecnoif.com.br/setif/anais/',
+        'anais' => 'https://tecnoif.com.br/periodicos/index.php/setif',
         'ed_2025' => 'https://tecnoif.com.br/setif/2025/',
         'ed_2024' => 'https://tecnoif.com.br/setif/2024/',
         'ed_2023' => 'https://tecnoif.com.br/setif/2023/',
