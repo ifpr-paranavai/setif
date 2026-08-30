@@ -6,7 +6,7 @@
 <title>SETIF 2025 – Semana da Tecnologia da Informação | 5 a 7 de Novembro | IFPR Paranavaí</title>
 
 <!-- Canonical -->
-<link rel="canonical" href="https://tecnoif.com.br/setif/2025/" />
+<link rel="canonical" href="https://tecnoif.com.br/setif" />
 
 <!-- Idioma / país -->
 <meta http-equiv="Content-Language" content="pt-BR" />

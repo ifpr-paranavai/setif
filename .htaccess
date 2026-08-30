@@ -25,3 +25,10 @@ RewriteRule ^(.*)$ $1.php
 #   L: interrompe o processamento das demais regras quando esta for aplicada.
 #   NC: ignora diferenças entre maiúsculas e minúsculas.
 RewriteRule ^.*anais.*$ https://tecnoif.com.br/periodicos/index.php/setif/pt_BR/ [R=301,L,NC]
+
+# =====================================================
+# Permite acessar arquivos PHP sem informar .php
+# =====================================================
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
