@@ -1,8 +1,24 @@
+/* ==========================================================================
+   SETIF 2026 - Rodapé
+   ========================================================================== */
+
 .site-footer {
-  border-top: 1px solid var(--border-color);
-  padding: 3rem 0;
+  margin-top: auto;
+  background: var(--ink);
+  padding: 1.5rem 0;
   text-align: center;
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  background: rgba(6, 10, 13, 0.96);
+}
+
+.site-footer p {
+  font-size: 0.75rem;
+  color: #8a8375;
+  margin: 0;
+}
+
+.site-footer a {
+  color: #b9b2a4;
+}
+
+.site-footer a:hover {
+  color: var(--ifpr-green-bright);
 }

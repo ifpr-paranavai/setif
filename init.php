@@ -4,6 +4,9 @@
 define('DS', DIRECTORY_SEPARATOR);
 define('ROOT', $_SERVER['DOCUMENT_ROOT']);
 define('SITE_ROOT', ROOT . DS . 'setif');
+// Prefixo das URLs públicas. Usado nos links/assets para que as rotas sem
+// extensão (.htaccess) continuem resolvendo os caminhos corretamente.
+define('BASE_URL', '/setif/');
 define('SITE_ROOT_ADMIN', SITE_ROOT . DS . 'admin');
 # 2º alternativa
 # define('SITE_ROOT',DS.'var'.DS.'www'.DS.'meu_site');
@@ -50,13 +53,14 @@ $evento = [
     'links' => [
         'atual' => 'https://tecnoif.com.br/setif/',
         'anais' => 'https://tecnoif.com.br/setif/anais/',
+        'periodicos' => 'https://tecnoif.com.br/periodicos/index.php/setif',
         'ed_2025' => 'https://tecnoif.com.br/setif/2025/',
         'ed_2024' => 'https://tecnoif.com.br/setif/2024/',
         'ed_2023' => 'https://tecnoif.com.br/setif/2023/',
         'ed_2022' => 'https://tecnoif.com.br/setif/2022/',
         'equipe_editorial' => 'https://tecnoif.com.br/periodicos/index.php/setif/about/editorialTeam',
         'submissoes' => 'https://tecnoif.com.br/periodicos/index.php/setif/about/submissions',
-        'inscricao' => 'https://docs.google.com/forms/d/e/1FAIpQLScYBIFxK5yzGD7g7Ahtm_ETHR0hiZlMk4MwjgUXFH0Lp2Qwtw/viewform'
+        'inscricao' => ''
     ],
     // Identificador do evento na Even3
     'even3_slug' => ''

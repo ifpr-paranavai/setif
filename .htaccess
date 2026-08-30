@@ -1,4 +1,12 @@
 RewriteEngine on
+
+# Rotas da edição atual.
+# Os arquivos ficam na pasta do ano, mas as URLs são servidas na raiz:
+#   /setif/sobre  ->  /setif/2026/sobre.php
+# Ao virar o ano, basta trocar o "2026" abaixo (e o include do index.php).
+RewriteRule ^(programacao|publicacao|sobre|edicoes)/?$ 2026/$1.php [L]
+
+# URLs sem a extensão .php para os demais arquivos do site.
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php

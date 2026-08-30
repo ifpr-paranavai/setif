@@ -1,108 +1,128 @@
-.site-header .navbar {
-  width: 100%;
-  background: rgba(6, 10, 13, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border-color);
-  padding: 0.8rem 0;
+/* ==========================================================================
+   SETIF 2026 - Cabeçalho e navegação
+   Barra escura fixa no topo, com marca "SETIF.26" e abas em pílula.
+   ========================================================================== */
+
+.site-navbar {
+  background: var(--ink);
+  padding: 0.875rem 0;
 }
 
-.logo-img-ifpr {
-  height: 80px;
-  width: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
-  transition: transform 0.3s ease, filter 0.3s ease;
+.site-navbar .container {
+  gap: 1rem;
 }
 
-.logo-img-ifpr:hover {
-  transform: scale(1.03);
-  filter: drop-shadow(0 0 12px rgba(0, 255, 136, 0.3));
+/* Marca ------------------------------------------------------------------ */
+
+.navbar-brand.brand-setif {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0;
+  margin: 0;
 }
 
-.navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.navbar-toggler:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 255, 136, 0.25);
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-.navbar-nav .nav-link {
-  display: inline-block;
-  color: #ffffff;
-  font-size: 0.92rem;
-  font-weight: 600;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  background: rgba(255, 255, 255, 0.05);
-  padding: 8px 20px;
-  margin: 0 4px;
-  border-radius: 10px;
-  border: 2px solid #ffffff;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
-}
-
-.navbar-nav .nav-link:hover {
-  color: #060a0d;
+.brand-mark {
+  width: 34px;
+  height: 34px;
   background: var(--ifpr-green);
-  border-color: var(--ifpr-green);
-  transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(0, 166, 81, 0.5);
-}
-
-.navbar-nav .dropdown-menu {
-  background: rgba(6, 10, 13, 0.96);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-accent);
-  border-radius: 12px;
-  padding: 0.5rem;
-  margin-top: 0.6rem;
-}
-
-.navbar-nav .dropdown-item {
-  color: #ffffff;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.0625rem;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.brand-text {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.1875rem;
+  color: #fff;
+  letter-spacing: -0.3px;
+}
+
+.brand-text span {
+  color: var(--ifpr-red);
+}
+
+/* Abas ------------------------------------------------------------------- */
+
+.site-navbar .navbar-nav {
+  gap: 4px;
+}
+
+.site-navbar .nav-link {
+  font-size: 0.845rem;
+  font-weight: 600;
   padding: 8px 14px;
-  transition: all 0.25s ease;
+  border-radius: 8px;
+  color: #cfc9bd;
+  transition: background-color 0.18s ease, color 0.18s ease;
 }
 
-.navbar-nav .dropdown-item:hover,
-.navbar-nav .dropdown-item:focus {
-  background: rgba(0, 166, 81, 0.2);
-  color: var(--logo-green-neon);
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link:focus {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
-.navbar-nav .dropdown-divider {
-  border-color: var(--border-color);
+.site-navbar .nav-link.active {
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--ifpr-green);
+}
+
+/* Botão de inscrição ----------------------------------------------------- */
+
+.btn-nav-inscricao {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: var(--ink);
+  background: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: background-color 0.18s ease, transform 0.18s ease;
+}
+
+.btn-nav-inscricao:hover,
+.btn-nav-inscricao:focus {
+  background: var(--ifpr-green-bright);
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+
+/* Menu mobile ------------------------------------------------------------ */
+
+.site-navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.25);
+  padding: 0.35rem 0.55rem;
+}
+
+.site-navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 166, 81, 0.4);
+}
+
+.site-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 @media (max-width: 991.98px) {
-  .navbar-collapse {
-    background: rgba(6, 10, 13, 0.96);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-top: 1px solid var(--border-accent);
-    margin-top: 0.8rem;
-    padding: 1.2rem;
-    border-radius: 16px;
+  .site-navbar .navbar-collapse {
+    padding-top: 0.75rem;
   }
 
-  .navbar-nav {
-    gap: 0.8rem;
+  .site-navbar .navbar-nav {
+    gap: 2px;
+    margin-bottom: 0.75rem;
   }
 
-  .navbar-nav .nav-link {
-    display: block;
-    text-align: center;
-  }
-
-  .logo-img-ifpr {
-    height: 60px;
+  .btn-nav-inscricao {
+    display: inline-block;
   }
 }
