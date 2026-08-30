@@ -2,6 +2,7 @@
 /**
  * Fechamento comum das páginas da SETIF 2026: rodapé e scripts.
  */
+$urlEdicao = $evento['links']['ed_2026'];
 ?>
 
     <?php require_once LIB_INCLUDES_2026 . DS . 'footer.php'; ?>
@@ -10,8 +11,8 @@
     <script src="<?php echo BASE_URL; ?>2024/bibliotecas/bootstrap-5.3.0/js/bootstrap.bundle.min.js"></script>
 
     <!-- JS da SETIF 2026 -->
-    <script src="<?php echo BASE_URL; ?>2026/assets/js/navigation.js"></script>
-    <script src="<?php echo BASE_URL; ?>2026/assets/js/main.js"></script>
+    <script src="<?php echo $urlEdicao; ?>assets/js/navigation.js"></script>
+    <script src="<?php echo $urlEdicao; ?>assets/js/main.js"></script>
 </body>
 
 </html>

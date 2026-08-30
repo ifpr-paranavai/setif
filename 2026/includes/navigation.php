@@ -5,19 +5,27 @@
  */
 $paginaAtual = $paginaAtual ?? 'inicio';
 
+// Todas as rotas vivem dentro da pasta da edição (ver 'ed_2026' no init.php).
+$urlEdicao = $evento['links']['ed_2026'];
+
 $abas = [
-    'inicio'      => ['rotulo' => 'Início',        'url' => BASE_URL],
-    'programacao' => ['rotulo' => 'Programação',   'url' => BASE_URL . 'programacao'],
-    'publicacao'  => ['rotulo' => 'Publicação',    'url' => BASE_URL . 'publicacao'],
-    'sobre'       => ['rotulo' => 'Sobre & Local', 'url' => BASE_URL . 'sobre'],
-    'edicoes'     => ['rotulo' => 'Edições',       'url' => BASE_URL . 'edicoes'],
+    'inicio'      => ['rotulo' => 'Início',        'url' => $urlEdicao],
+    'programacao' => ['rotulo' => 'Programação',   'url' => $urlEdicao . 'programacao'],
+    'publicacao'  => ['rotulo' => 'Publicação',    'url' => $urlEdicao . 'publicacao'],
+    'sobre'       => ['rotulo' => 'Sobre & Local', 'url' => $urlEdicao . 'sobre'],
+    'edicoes'     => ['rotulo' => 'Edições',       'url' => $urlEdicao . 'edicoes'],
 ];
+
+// Enquanto as inscrições não abrem, o link fica vazio: o botão continua sendo um
+// link normal, só que apontando para '#'. Um href="" recarregaria a página.
+$linkInscricao = $evento['links']['inscricao'] ?? '';
+$temInscricao  = $linkInscricao !== '';
 ?>
 <header class="site-header">
   <nav class="navbar navbar-expand-lg site-navbar" aria-label="Navegação principal">
     <div class="container d-flex flex-wrap align-items-center justify-content-between">
 
-      <a class="navbar-brand brand-setif" href="<?php echo BASE_URL; ?>">
+      <a class="navbar-brand brand-setif" href="<?php echo $urlEdicao; ?>">
         <span class="brand-mark" aria-hidden="true">S</span>
         <span class="brand-text">SETIF<span>.26</span></span>
       </a>
@@ -40,8 +48,9 @@ $abas = [
           <?php endforeach; ?>
         </ul>
 
-        <a class="btn-nav-inscricao" href="<?php echo $evento['links']['inscricao']; ?>" target="_blank" rel="noopener">
-          Inscreva-se
+        <a class="btn-nav-inscricao" href="<?php echo $temInscricao ? $linkInscricao : '#'; ?>"
+           <?php echo $temInscricao ? 'target="_blank" rel="noopener"' : ''; ?>>
+          <?php echo $temInscricao ? 'Inscreva-se' : 'Inscrições em breve'; ?>
         </a>
       </div>
 

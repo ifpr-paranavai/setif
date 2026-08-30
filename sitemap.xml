@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Página principal da edição atual -->
     <url>
-        <loc>https://tecnoif.com.br/setif/</loc>
+        <loc>https://tecnoif.com.br/setif/2026/</loc>
         <lastmod>2026-08-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -10,36 +10,28 @@
 
     <!-- Seções da edição atual -->
     <url>
-        <loc>https://tecnoif.com.br/setif/programacao</loc>
+        <loc>https://tecnoif.com.br/setif/2026/programacao</loc>
         <lastmod>2026-08-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://tecnoif.com.br/setif/publicacao</loc>
+        <loc>https://tecnoif.com.br/setif/2026/publicacao</loc>
         <lastmod>2026-08-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://tecnoif.com.br/setif/sobre</loc>
+        <loc>https://tecnoif.com.br/setif/2026/sobre</loc>
         <lastmod>2026-08-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://tecnoif.com.br/setif/edicoes</loc>
+        <loc>https://tecnoif.com.br/setif/2026/edicoes</loc>
         <lastmod>2026-08-30</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
-    </url>
-
-    <!-- Anais / Mostra de Trabalhos da edição atual -->
-    <url>
-        <loc>https://tecnoif.com.br/setif/anais/</loc>
-        <lastmod>2025-08-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
     </url>
 
     <!-- Edições anteriores -->
@@ -70,7 +62,7 @@
 
     <!-- Páginas relacionadas ao periódico -->
     <url>
-        <loc>https://tecnoif.com.br/periodicos/index.php/setif/about/editorialTeam</loc>
+        <loc>https://tecnoif.com.br/periodicos/index.php/setif/about/editorialMasthead</loc>
         <lastmod>2025-08-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>

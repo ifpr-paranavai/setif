@@ -7,6 +7,9 @@ define('SITE_ROOT', ROOT . DS . 'setif');
 // Prefixo das URLs públicas. Usado nos links/assets para que as rotas sem
 // extensão (.htaccess) continuem resolvendo os caminhos corretamente.
 define('BASE_URL', '/setif/');
+define('SITE_URL', 'https://tecnoif.com.br');
+define('EDICAO_ATUAL', '2026');
+define('URL_PERIODICOS', SITE_URL . '/periodicos/index.php/setif');
 define('SITE_ROOT_ADMIN', SITE_ROOT . DS . 'admin');
 # 2º alternativa
 # define('SITE_ROOT',DS.'var'.DS.'www'.DS.'meu_site');
@@ -35,7 +38,7 @@ define('LIB_INCLUDES_2026', SITE_ROOT . DS . '2026' . DS . 'includes');
  * Arquivo de configuração com variáveis globais do evento
  * 
  * @author IFPR Paranavaí - Leandro Menoni
- * @version 1.1
+ * @version 1.2
  */
 
 $evento = [
@@ -51,20 +54,19 @@ $evento = [
         'telefone' => '(44) 3482-0110'
     ],
     'links' => [
-        'atual' => '/setif/',
-        'anais' => '/periodicos/index.php/setif',
-        'periodicos' => '/periodicos/index.php/setif',
-        'ed_2025' => '/setif/2025/',
-        'ed_2024' => '/setif/2024/',
-        'ed_2023' => '/setif/2023/',
-        'ed_2022' => '/setif/2022/',
-        'equipe_editorial' => '/periodicos/index.php/setif/about/editorialTeam',
-        'submissoes' => '/periodicos/index.php/setif/about/submissions',
+        'atual' => BASE_URL . EDICAO_ATUAL . '/',
+        'anais' => URL_PERIODICOS,
+        'periodicos' => URL_PERIODICOS,
+        'ed_2026' => BASE_URL . '2026/',
+        'ed_2025' => BASE_URL . '2025/',
+        'ed_2024' => BASE_URL . '2024/',
+        'ed_2023' => BASE_URL . '2023/',
+        'ed_2022' => BASE_URL . '2022/',
+        'equipe_editorial' => URL_PERIODICOS . '/about/editorialMasthead',
+        'submissoes' => URL_PERIODICOS . '/about/submissions',
 
         'inscricao' => ''
     ],
     // Identificador do evento na Even3
     'even3_slug' => ''
 ];
-
-?>

@@ -49,7 +49,7 @@ if (in_array($currentPage, $dropdownPages)) {
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item"
-                                href="https://tecnoif.com.br/periodicos/index.php/setif/about/editorialTeam">Corpo
+                                href="https://tecnoif.com.br/periodicos/index.php/setif/about/editorialMasthead">Corpo
                                 Editorial</a></li>
                         <li><a class="dropdown-item"
                                 href="https://tecnoif.com.br/periodicos/index.php/setif/about/submissions">Normas de

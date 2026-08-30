@@ -1,12 +1,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><?php echo $evento['titulo']; ?> - IFPR Paranavaí</title>
 
 <!-- Título -->
 <title>SETIF 2025 – Semana da Tecnologia da Informação | 5 a 7 de Novembro | IFPR Paranavaí</title>
 
 <!-- Canonical -->
-<link rel="canonical" href="https://tecnoif.com.br/setif" />
+<link rel="canonical" href="https://tecnoif.com.br/setif/2025/" />
 
 <!-- Idioma / país -->
 <meta http-equiv="Content-Language" content="pt-BR" />

@@ -40,6 +40,12 @@ Use `<ANO>` como o ano da nova edição e siga esta ordem:
 
 3. **Configure os dados do evento.** Atualize o `$evento` no `init.php` com título, datas, local, contatos, URLs, links de inscrição e identificador do Even3. O `$evento` global representa a edição atual.
 
+	Aponte também a constante `EDICAO_ATUAL` para o novo ano. É ela que faz a raiz do site (`/setif/`) redirecionar para a pasta da edição corrente:
+
+	```php
+	define('EDICAO_ATUAL', '<ANO>');
+	```
+
 4. **Revise os arquivos copiados.** Substitua referências ao ano anterior em:
 	- `index.php` e demais páginas da edição;
 	- `includes/metadados.php`, incluindo título, descrição, canonical e Open Graph;
@@ -56,6 +62,8 @@ Use `<ANO>` como o ano da nova edição e siga esta ordem:
 ## Convenções importantes
 
 - Nomes de constantes por edição: `LIB_IMG_<ANO>` e `LIB_INCLUDES_<ANO>`.
+- `BASE_URL` (`/setif/`) monta as URLs públicas; `SITE_URL` só onde a URL precisa ser absoluta (canonical, Open Graph, sitemap).
+- Cada edição é servida a partir da própria pasta (`/setif/<ANO>/`). A raiz não hospeda conteúdo: apenas redireciona para a edição atual.
 - Use `DS` e as constantes de caminho do `init.php` em vez de caminhos absolutos nas inclusões PHP.
 - Os dados específicos de uma edição devem ficar na pasta dela; configurações compartilhadas ficam no `init.php` ou no `admin/`.
 - Não altere o conteúdo histórico apenas para apontar para arquivos da nova edição.
@@ -69,5 +77,5 @@ banco/       Script do banco de dados
 fotos/       Fotos das edições
 <ANO>/       Páginas e recursos de uma edição do evento
 init.php     Configurações globais e caminhos das edições
-index.php    Página inicial do site
+index.php    Raiz do site; redireciona para a edição atual (EDICAO_ATUAL)
 ```

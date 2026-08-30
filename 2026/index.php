@@ -41,8 +41,11 @@ require_once LIB_INCLUDES_2026 . DS . 'cabecalho.php';
                 </div>
 
                 <div class="d-flex flex-wrap align-items-center gap-3">
-                    <a href="<?php echo $evento['links']['inscricao']; ?>" target="_blank" rel="noopener" class="btn-setif">
-                        <i class="bi bi-ticket-perforated-fill"></i> Garantir minha vaga
+                    <?php $temInscricao = $evento['links']['inscricao'] !== ''; ?>
+                    <a class="btn-setif" href="<?php echo $temInscricao ? $evento['links']['inscricao'] : '#'; ?>"
+                       <?php echo $temInscricao ? 'target="_blank" rel="noopener"' : ''; ?>>
+                        <i class="bi bi-ticket-perforated-fill"></i>
+                        <?php echo $temInscricao ? 'Garantir minha vaga' : 'Inscrições em breve'; ?>
                     </a>
                     <span class="hero-note">04 - 06 de Novembro</span>
                 </div>
