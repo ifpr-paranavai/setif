@@ -16,8 +16,7 @@ $abas = [
     'edicoes'     => ['rotulo' => 'Edições',       'url' => $urlEdicao . 'edicoes'],
 ];
 
-// Enquanto as inscrições não abrem, o link fica vazio: o botão continua sendo um
-// link normal, só que apontando para '#'. Um href="" recarregaria a página.
+// Enquanto as inscrições não abrem, o link fica vazio.
 $linkInscricao = $evento['links']['inscricao'] ?? '';
 $temInscricao  = $linkInscricao !== '';
 ?>
@@ -25,10 +24,16 @@ $temInscricao  = $linkInscricao !== '';
   <nav class="navbar navbar-expand-lg site-navbar" aria-label="Navegação principal">
     <div class="container d-flex flex-wrap align-items-center justify-content-between">
 
-      <a class="navbar-brand brand-setif" href="<?php echo $urlEdicao; ?>">
-        <span class="brand-mark" aria-hidden="true">S</span>
-        <span class="brand-text">SETIF<span>.26</span></span>
-      </a>
+      <!-- Logos IFPR e SETIF Lado a Lado -->
+      <div class="navbar-brand-group">
+        <a href="<?php echo $urlEdicao; ?>" class="d-flex align-items-center">
+          <img src="assets/images/logo-ifpr.png" alt="IFPR Campus Paranavaí" class="navbar-logo-ifpr">
+        </a>
+        <div class="navbar-divider"></div>
+        <a href="<?php echo $urlEdicao; ?>" class="d-flex align-items-center">
+          <img src="assets/images/logo-setif.png" alt="SETIF 2026" class="navbar-logo-setif">
+        </a>
+      </div>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">

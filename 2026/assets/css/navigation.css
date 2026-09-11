@@ -1,63 +1,39 @@
-/* ==========================================================================
-   SETIF 2026 - Cabeçalho e navegação
-   Barra escura fixa no topo, com marca "SETIF.26" e abas em pílula.
-   ========================================================================== */
-
 .site-navbar {
   background: var(--ink);
-  padding: 0.875rem 0;
+  padding: 0.35rem 0;
 }
 
 .site-navbar .container {
   gap: 1rem;
 }
 
-/* Marca ------------------------------------------------------------------ */
-
 .navbar-brand.brand-setif {
   display: flex;
   align-items: center;
-  gap: 0.625rem;
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }
 
-.brand-mark {
-  width: 34px;
-  height: 34px;
-  background: var(--ifpr-green);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 1.0625rem;
-  line-height: 1;
-  color: var(--ink);
+.nav-logo-setif {
+  height: 58px !important;
+  max-height: 58px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  transition: transform 0.18s ease;
 }
 
-.brand-text {
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 1.1875rem;
-  color: #fff;
-  letter-spacing: -0.3px;
+.navbar-brand.brand-setif:hover .nav-logo-setif {
+  transform: scale(1.03);
 }
-
-.brand-text span {
-  color: var(--ifpr-red);
-}
-
-/* Abas ------------------------------------------------------------------- */
 
 .site-navbar .navbar-nav {
   gap: 4px;
 }
 
 .site-navbar .nav-link {
-  font-size: 0.845rem;
+  font-size: 0.875rem;
   font-weight: 600;
   padding: 8px 14px;
   border-radius: 8px;
@@ -77,8 +53,6 @@
   background: var(--ifpr-green);
 }
 
-/* Botão de inscrição ----------------------------------------------------- */
-
 .btn-nav-inscricao {
   font-weight: 700;
   font-size: 0.8125rem;
@@ -96,8 +70,6 @@
   color: var(--ink);
   transform: translateY(-1px);
 }
-
-/* Menu mobile ------------------------------------------------------------ */
 
 .site-navbar .navbar-toggler {
   border-color: rgba(255, 255, 255, 0.25);
@@ -124,5 +96,10 @@
 
   .btn-nav-inscricao {
     display: inline-block;
+  }
+
+  .nav-logo-setif {
+    height: 44px !important;
+    max-height: 44px !important;
   }
 }

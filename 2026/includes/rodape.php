@@ -14,5 +14,4 @@ $urlEdicao = $evento['links']['ed_2026'];
     <script src="<?php echo $urlEdicao; ?>assets/js/navigation.js"></script>
     <script src="<?php echo $urlEdicao; ?>assets/js/main.js"></script>
 </body>
-
 </html>
