@@ -34,3 +34,13 @@ function setupCountdown() {
   updateCountdown();
   setInterval(updateCountdown, 1000);
 }
+
+/* Efeito magnético do fundo */
+document.addEventListener("mousemove", (e) => {
+  const magneticBg = document.querySelector(".magnetic-bg");
+  if (magneticBg) {
+    // Atualiza as variáveis CSS em tempo real acompanhando o mouse
+    magneticBg.style.setProperty("--mouse-x", `${e.clientX}px`);
+    magneticBg.style.setProperty("--mouse-y", `${e.clientY}px`);
+  }
+});

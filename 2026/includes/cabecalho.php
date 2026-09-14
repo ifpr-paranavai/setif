@@ -1,7 +1,5 @@
 <?php
-/**
- * Abertura comum das páginas da SETIF 2026: <head>, <body> e navegação.
- */
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -11,5 +9,7 @@
 </head>
 
 <body>
+    
+    <div class="magnetic-bg"></div>
 
     <?php require_once LIB_INCLUDES_2026 . DS . 'navigation.php'; ?>
