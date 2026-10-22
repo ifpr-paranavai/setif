@@ -90,7 +90,7 @@ require_once LIB_INCLUDES_2026 . DS . 'cabecalho.php';
                 <?php if (!empty($evento['even3_slug'])): ?>
                     <div class="even3-container">
                         <iframe
-                            class="even3-frame"
+                            class="even3-frame  p-3"
                             src="https://www.even3.com.br/widget/index?evento=<?php echo urlencode($evento['even3_slug']); ?>&amp;type=session&amp;lang=pt"
                             title="Cronograma da <?php echo htmlspecialchars($evento['titulo']); ?> (Even3)"
                             loading="lazy"
