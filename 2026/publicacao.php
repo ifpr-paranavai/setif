@@ -108,13 +108,12 @@ require_once LIB_INCLUDES_2026 . DS . 'cabecalho.php';
                     </div>
 
                     <div class="p-5 text-center bg-white rounded-4 border border-dashed border-2">
-                        <div class="mb-3 text-success">
-                            <i class="bi bi-easel fs-1"></i>
-                        </div>
-                        <h4 class="fw-bold mb-2">Vitrine em breve</h4>
-                        <p class="text-muted mx-auto mb-0" style="max-width: 520px;">
-                            Em breve você poderá conferir os detalhes das palestras, minicursos e a lista com o resumo dos trabalhos em exposição nesta edição.
-                        </p>
+                        <iframe
+                            class="even3-frame"
+                            src="https://www.even3.com.br/widget/index?evento=<?php echo urlencode($evento['even3_slug']); ?>&amp;type=session&amp;lang=pt"
+                            title="Cronograma da <?php echo htmlspecialchars($evento['titulo']); ?> (Even3)"
+                            loading="lazy"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
 
