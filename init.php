@@ -68,5 +68,5 @@ $evento = [
         'inscricao' => 'https://www.even3.com.br/setif2026-790393/'
     ],
     // Identificador do evento na Even3
-    'even3_slug' => ''
+    'even3_slug' => 'setif2026-790393'
 ];
