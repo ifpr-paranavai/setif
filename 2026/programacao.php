@@ -83,7 +83,7 @@ require_once LIB_INCLUDES_2026 . DS . 'cabecalho.php';
                         <h2 class="section-title mb-0">Cronograma</h2>
                     </div>
                     <p class="cronograma-subtext text-muted mb-0">
-                        Acompanhe as datas e atividades da <?php echo htmlspecialchars($evento['titulo']); ?>. A grade completa será divulgada em breve no Even3.
+                        Acompanhe as datas e atividades da <?php echo htmlspecialchars($evento['titulo']); ?>. A grade completa está divulgada no Even3.
                     </p>
                 </div>
 
