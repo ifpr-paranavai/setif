@@ -1,8 +1,8 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/setif/init.php';
 
-$paginaAtual     = 'programacao';
-$tituloPagina    = 'Programação';
+$paginaAtual = 'programacao';
+$tituloPagina = 'Programação';
 $descricaoPagina = 'Programação da ' . $evento['titulo'] . ': palestras, mostra de trabalhos e minicursos '
     . 'organizados por alunos e professores do ' . $evento['local'] . '.';
 
@@ -37,7 +37,7 @@ require_once LIB_INCLUDES_2026 . DS . 'cabecalho.php';
             </div>
 
             <div class="row g-4 mb-5">
-                
+
                 <div class="col-lg-4 col-md-6">
                     <article class="format-card format-card--clean">
                         <div class="format-badge format-badge--green mb-3">
@@ -45,21 +45,26 @@ require_once LIB_INCLUDES_2026 . DS . 'cabecalho.php';
                         </div>
                         <h2 class="format-card-title">Palestras</h2>
                         <p class="format-card-text">
-                            Ministradas por pessoas com alto conhecimento no tema escolhido, trazendo assuntos recentes e relevantes de TI para a plateia.
+                            Ministradas por pessoas com alto conhecimento no tema escolhido, trazendo assuntos recentes
+                            e relevantes de TI para a plateia.
                         </p>
                     </article>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <article class="format-card format-card--clean">
-                        <div class="format-badge format-badge--red mb-3">
-                            <i class="bi bi-layers-fill"></i>
-                        </div>
-                        <h2 class="format-card-title">Mostra de trabalhos</h2>
-                        <p class="format-card-text">
-                            Exposição dos projetos desenvolvidos pelos alunos dos cursos presentes no campus, aberto ao público.
-                        </p>
-                    </article>
+                    <a href="<?= $evento['links']['ensalamento'] ?>" title="Clique para ver o ensalamento."
+                        target="_blank">
+                        <article class="format-card format-card--clean">
+                            <div class="format-badge format-badge--red mb-3">
+                                <i class="bi bi-layers-fill"></i>
+                            </div>
+                            <h2 class="format-card-title">Mostra de trabalhos</h2>
+                            <p class="format-card-text">
+                                Exposição dos projetos desenvolvidos pelos alunos dos cursos presentes no campus, aberto
+                                ao público.
+                            </p>
+                        </article>
+                    </a>
                 </div>
 
                 <div class="col-lg-4 col-md-12">
@@ -69,7 +74,8 @@ require_once LIB_INCLUDES_2026 . DS . 'cabecalho.php';
                         </div>
                         <h2 class="format-card-title">Minicursos</h2>
                         <p class="format-card-text">
-                            Preparados e ministrados pelos próprios alunos, para outros estudantes ou qualquer pessoa de fora do IFPR.
+                            Preparados e ministrados pelos próprios alunos, para outros estudantes ou qualquer pessoa de
+                            fora do IFPR.
                         </p>
                     </article>
                 </div>
@@ -83,45 +89,45 @@ require_once LIB_INCLUDES_2026 . DS . 'cabecalho.php';
                         <h2 class="section-title mb-0">Cronograma</h2>
                     </div>
                     <p class="cronograma-subtext text-muted mb-0">
-                        Acompanhe as datas e atividades da <?php echo htmlspecialchars($evento['titulo']); ?>. A grade completa está divulgada no Even3.
+                        Acompanhe as datas e atividades da <?php echo htmlspecialchars($evento['titulo']); ?>. A grade
+                        completa está divulgada no Even3.
                     </p>
                 </div>
 
                 <?php if (!empty($evento['even3_slug'])): ?>
-                    <div class="even3-container">
-                        <iframe
-                            class="even3-frame  p-3"
-                            src="https://www.even3.com.br/widget/index?evento=<?php echo urlencode($evento['even3_slug']); ?>&amp;type=session&amp;lang=pt"
-                            title="Cronograma da <?php echo htmlspecialchars($evento['titulo']); ?> (Even3)"
-                            loading="lazy"
-                            allowfullscreen></iframe>
-                    </div>
+                <div class="even3-container">
+                    <iframe class="even3-frame  p-3"
+                        src="https://www.even3.com.br/widget/index?evento=<?php echo urlencode($evento['even3_slug']); ?>&amp;type=session&amp;lang=pt"
+                        title="Cronograma da <?php echo htmlspecialchars($evento['titulo']); ?> (Even3)" loading="lazy"
+                        allowfullscreen></iframe>
+                </div>
                 <?php else: ?>
-                    <div class="schedule-notice-card">
-                        <div class="schedule-notice-top">
-                            <div class="schedule-tabs">
-                                <span class="schedule-tab active">Todos</span>
-                                <span class="schedule-tab">Palestras</span>
-                                <span class="schedule-tab">Minicursos</span>
-                                <span class="schedule-tab">Competições</span>
-                                <span class="schedule-tab">Mostra</span>
-                            </div>
-                            <div class="schedule-notice-badge">
-                                <i class="bi bi-calendar-event text-success fs-5"></i>
-                                <div>
-                                    <strong class="d-block text-dark">Grade em breve no Even3</strong>
-                                    <small class="text-muted">Assim que a programação estiver disponível, você poderá se inscrever e garantir sua participação.</small>
-                                </div>
-                            </div>
+                <div class="schedule-notice-card">
+                    <div class="schedule-notice-top">
+                        <div class="schedule-tabs">
+                            <span class="schedule-tab active">Todos</span>
+                            <span class="schedule-tab">Palestras</span>
+                            <span class="schedule-tab">Minicursos</span>
+                            <span class="schedule-tab">Competições</span>
+                            <span class="schedule-tab">Mostra</span>
                         </div>
-                        <div class="schedule-notice-body">
-                            <div class="notice-empty-state text-center py-4">
-                                <i class="bi bi-calendar2-week fs-2 text-success mb-2 d-block"></i>
-                                <strong class="d-block text-dark">Nenhuma atividade disponível no momento</strong>
-                                <span class="text-muted small">A programação será divulgada em breve.</span>
+                        <div class="schedule-notice-badge">
+                            <i class="bi bi-calendar-event text-success fs-5"></i>
+                            <div>
+                                <strong class="d-block text-dark">Grade em breve no Even3</strong>
+                                <small class="text-muted">Assim que a programação estiver disponível, você poderá se
+                                    inscrever e garantir sua participação.</small>
                             </div>
                         </div>
                     </div>
+                    <div class="schedule-notice-body">
+                        <div class="notice-empty-state text-center py-4">
+                            <i class="bi bi-calendar2-week fs-2 text-success mb-2 d-block"></i>
+                            <strong class="d-block text-dark">Nenhuma atividade disponível no momento</strong>
+                            <span class="text-muted small">A programação será divulgada em breve.</span>
+                        </div>
+                    </div>
+                </div>
                 <?php endif; ?>
             </div>
 

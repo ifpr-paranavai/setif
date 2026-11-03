@@ -9,56 +9,57 @@ $paginaAtual = $paginaAtual ?? 'inicio';
 $urlEdicao = $evento['links']['ed_2026'];
 
 $abas = [
-    'inicio'      => ['rotulo' => 'Início',        'url' => $urlEdicao],
-    'programacao' => ['rotulo' => 'Programação',   'url' => $urlEdicao . 'programacao'],
-    'publicacao'  => ['rotulo' => 'Publicação',    'url' => $urlEdicao . 'publicacao'],
-    'sobre'       => ['rotulo' => 'Sobre & Local', 'url' => $urlEdicao . 'sobre'],
-    'edicoes'     => ['rotulo' => 'Edições',       'url' => $urlEdicao . 'edicoes'],
+  'inicio' => ['rotulo' => 'Início', 'url' => $urlEdicao],
+  'programacao' => ['rotulo' => 'Programação', 'url' => $urlEdicao . 'programacao'],
+  'publicacao' => ['rotulo' => 'Publicação', 'url' => $urlEdicao . 'publicacao'],
+  'ensalamento' => ['rotulo' => 'Ensalamento', 'url' => $evento['links']['ensalamento']],
+  'sobre' => ['rotulo' => 'Sobre & Local', 'url' => $urlEdicao . 'sobre'],
+  'edicoes' => ['rotulo' => 'Edições', 'url' => $urlEdicao . 'edicoes'],
 ];
 
 // Enquanto as inscrições não abrem, o link fica vazio.
 $linkInscricao = $evento['links']['inscricao'] ?? '';
-$temInscricao  = $linkInscricao !== '';
+$temInscricao = $linkInscricao !== '';
 ?>
 <header class="site-header">
-  <nav class="navbar navbar-expand-lg site-navbar" aria-label="Navegação principal">
-    <div class="container d-flex flex-wrap align-items-center justify-content-between">
+    <nav class="navbar navbar-expand-lg site-navbar" aria-label="Navegação principal">
+        <div class="container d-flex flex-wrap align-items-center justify-content-between">
 
-      <!-- Logos IFPR e SETIF Lado a Lado -->
-      <div class="navbar-brand-group">
-        <a href="<?php echo $urlEdicao; ?>" class="d-flex align-items-center">
-          <img src="assets/images/logo-ifpr.png" alt="IFPR Campus Paranavaí" class="navbar-logo-ifpr">
-        </a>
-        <div class="navbar-divider"></div>
-        <a href="<?php echo $urlEdicao; ?>" class="d-flex align-items-center">
-          <img src="assets/images/logo-setif.png" alt="SETIF 2026" class="navbar-logo-setif">
-        </a>
-      </div>
+            <!-- Logos IFPR e SETIF Lado a Lado -->
+            <div class="navbar-brand-group">
+                <a href="<?php echo $urlEdicao; ?>" class="d-flex align-items-center">
+                    <img src="assets/images/logo-ifpr.png" alt="IFPR Campus Paranavaí" class="navbar-logo-ifpr">
+                </a>
+                <div class="navbar-divider"></div>
+                <a href="<?php echo $urlEdicao; ?>" class="d-flex align-items-center">
+                    <img src="assets/images/logo-setif.png" alt="SETIF 2026" class="navbar-logo-setif">
+                </a>
+            </div>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-lg-auto">
-          <?php foreach ($abas as $chave => $aba): ?>
-            <li class="nav-item">
-              <a class="nav-link<?php echo $paginaAtual === $chave ? ' active' : ''; ?>"
-                 href="<?php echo $aba['url']; ?>"
-                 <?php echo $paginaAtual === $chave ? 'aria-current="page"' : ''; ?>>
-                <?php echo htmlspecialchars($aba['rotulo'], ENT_QUOTES, 'UTF-8'); ?>
-              </a>
-            </li>
-          <?php endforeach; ?>
-        </ul>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-lg-auto">
+                    <?php foreach ($abas as $chave => $aba): ?>
+                    <li class="nav-item">
+                        <a class="nav-link<?php echo $paginaAtual === $chave ? ' active' : ''; ?>"
+                            href="<?php echo $aba['url']; ?>"
+                            <?php echo $paginaAtual === $chave ? 'aria-current="page"' : ''; ?>>
+                            <?php echo htmlspecialchars($aba['rotulo'], ENT_QUOTES, 'UTF-8'); ?>
+                        </a>
+                    </li>
+                    <?php endforeach; ?>
+                </ul>
 
-        <a class="btn-nav-inscricao" href="<?php echo $temInscricao ? $linkInscricao : '#'; ?>"
-           <?php echo $temInscricao ? 'target="_blank" rel="noopener"' : ''; ?>>
-          <?php echo $temInscricao ? 'Inscreva-se' : 'Inscrições em breve'; ?>
-        </a>
-      </div>
+                <a class="btn-nav-inscricao" href="<?php echo $temInscricao ? $linkInscricao : '#'; ?>"
+                    <?php echo $temInscricao ? 'target="_blank" rel="noopener"' : ''; ?>>
+                    <?php echo $temInscricao ? 'Inscreva-se' : 'Inscrições em breve'; ?>
+                </a>
+            </div>
 
-    </div>
-  </nav>
+        </div>
+    </nav>
 </header>
