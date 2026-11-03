@@ -65,7 +65,8 @@ $evento = [
         'equipe_editorial' => URL_PERIODICOS . '/about/editorialMasthead',
         'submissoes' => URL_PERIODICOS . '/about/submissions',
 
-        'inscricao' => 'https://www.even3.com.br/setif2026-790393/'
+        'inscricao' => 'https://www.even3.com.br/setif2026-790393/',
+        'ensalamento' => 'https://docs.google.com/document/d/e/2PACX-1vTPItktU-0kox8iS7tyCq6WT7L_Fvf2DVCJrqI0pBb874StxWf52xw7s4u7ugcgAaH0-D0VZn0XLjir/pub'
     ],
     // Identificador do evento na Even3
     'even3_slug' => 'setif2026-790393'
